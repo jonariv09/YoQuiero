@@ -15,7 +15,7 @@ export default class Carousel extends Component {
           class="carousel slide"
           data-ride="carousel"
         >
-          <div class="carousel-inner">
+          <div class="carousel-inner rounded">
             <div class="carousel-item active">
               <img src={Banner1} class="d-block w-100" alt="..." />
             </div>
