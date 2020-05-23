@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FcShop } from "react-icons/fc";
 import "./index.css";
+import '../../css/GeneralStyles.css'
 
 export default class SubNavBar extends Component {
   render() {
@@ -9,7 +10,7 @@ export default class SubNavBar extends Component {
         <nav class="navbar sub-navbar">
           <div className="row">
             <div className="col-xl-2">
-              <a className="create-store-button" href="https://www.google.com">
+              <a className="create-store-button btn-ghost" href="https://www.google.com">
                 <div className="d-flex align-items-center">
                   <FcShop className="mr-1" />
                   Crea tu tienda

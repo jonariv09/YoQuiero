@@ -1,0 +1,8 @@
+.link:hover {
+  text-decoration: none;
+}
+
+.divider {
+  width: 1px;
+  background: rgb(202, 202, 202);
+}
