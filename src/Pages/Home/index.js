@@ -4,13 +4,17 @@ import Categories from '../../components/Categories'
 import Carousel from '../../components/Carousel'
 import InterestingProducts from '../../components/InterestingProducts'
 import FeaturedProducts from '../../components/FeaturedProducts'
+import Footer from '../../components/Footer'
+import AboveNavBar from "../../components/AboveNavBar";
+import SubNavBar from "../../components/SubNavBar";
 import './index.css'
 
 export default function Home() {
   return (
     <>
-      <div>
+        <AboveNavBar />
         <NavBar />
+        <SubNavBar />
         <div className="container-fluid px-4">
           <div className="row mt-4 px-5">
             <div className="col-xl-3">
@@ -26,7 +30,8 @@ export default function Home() {
           <InterestingProducts />
           <FeaturedProducts />
         </div>
-      </div>
+
+        <Footer />
     </>
   )
 }

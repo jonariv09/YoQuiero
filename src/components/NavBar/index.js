@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./index.css";
-import AboveNavBar from "../../components/AboveNavBar";
-import SubNavBar from "../../components/SubNavBar";
+
 import Logo from "../../assets/logo.jpeg";
 import SpanishImage from "../../assets/spanish_language.png";
 import EnglishImage from "../../assets/english_language.png";
@@ -21,7 +20,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <>
-        <AboveNavBar />
+        
         <nav class="navbar navbar-expand-lg main-navbar flex-row">
           <div className="row py-1">
             <div className="col-xl-3 d-flex align-items-center">
@@ -150,7 +149,7 @@ export default class NavBar extends Component {
             ))}
           </div>
         </nav>
-        <SubNavBar />
+        
       </>
     );
   }

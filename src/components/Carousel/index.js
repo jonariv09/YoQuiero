@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import Banner1 from "../../assets/banner1.jpg";
 import Banner2 from "../../assets/banner2.png";
 import Banner3 from "../../assets/banner3.jpg";
