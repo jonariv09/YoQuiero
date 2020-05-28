@@ -1,43 +1,45 @@
 import React, { Component } from "react";
+import {FiHelpCircle} from 'react-icons/fi'
 import "./index.css";
+import './overwrite.css'
 
 export default class CreateStoreForm extends Component {
   render() {
     return (
       <>
-        <form>
+        <form className="card create-store-form p-3">
+          <div className="header-form pb-2 d-flex">
+            <div>
+              <span class="h3 font-weight-bold"> Crear tu tienda </span>
+              <span class="lead font-weight-bold">
+                Información de la tienda
+              </span>
+            </div>
+            <div>
+              <FiHelpCircle />
+            </div>
+          </div>
+
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-            <small id="emailHelp" class="form-text text-muted">
-              We'll never share your email with anyone else.
-            </small>
+            <label for="name">Nombre de tu negocio</label>
+            <input type="text" class="form-control" id="name" />
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
+            <label for="category">Categoría</label>
+            <input type="text" class="form-control" id="category" />
           </div>
-          <div class="form-group form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1">
-              Check me out
-            </label>
+
+          <div class="form-group">
+            <label for="department">Departamento</label>
+            <input type="text" class="form-control" id="department" />
           </div>
+          <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+          </div>
+
           <button type="submit" class="btn btn-primary">
-            Submit
+            Crear tu negocio
           </button>
         </form>
       </>

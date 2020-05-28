@@ -7,13 +7,23 @@ export default class CreateStore extends Component {
   render() {
     return (
       <>
-        <NavBar />
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-4">
-              <CreateStoreForm />
+        <div className="wrapper-store-page">
+          <div className="content-wrapper-store-page">
+            <div className="content-page">
+
+              
+              <NavBar />
+              <div className="container">
+                <div className="row">
+                  <div className="col-xl-4">
+                    <CreateStoreForm />
+                  </div>
+                  <div className="col-xl-8"></div>
+                </div>
+              </div>
+
+
             </div>
-            <div className="col-xl-8"></div>
           </div>
         </div>
       </>
