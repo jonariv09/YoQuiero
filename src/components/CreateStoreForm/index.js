@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import {FiHelpCircle} from 'react-icons/fi'
+import { FiHelpCircle } from "react-icons/fi";
 import "./index.css";
-import './overwrite.css'
+import "./overwrite.css";
 
 export default class CreateStoreForm extends Component {
   render() {
@@ -20,27 +20,39 @@ export default class CreateStoreForm extends Component {
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="name">Nombre de tu negocio</label>
-            <input type="text" class="form-control" id="name" />
-          </div>
-          <div class="form-group">
-            <label for="category">Categoría</label>
-            <input type="text" class="form-control" id="category" />
+          <div className="body-form">
+            <div class="form-group">
+              <label for="name">Nombre de tu negocio</label>
+              <input type="text" class="form-control" id="name" />
+            </div>
+            <div class="form-group">
+              <label for="category">Categoría</label>
+              <input type="text" class="form-control" id="category" />
+            </div>
+
+            <div class="form-group">
+              <label for="department">Departamento</label>
+              <input type="text" class="form-control" id="department" />
+            </div>
+            <div class="form-group">
+              <label for="description">Descripción</label>
+              <textarea
+                class="form-control"
+                id="description"
+                rows="3"
+              ></textarea>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="department">Departamento</label>
-            <input type="text" class="form-control" id="department" />
+          <div className="footer-form">
+            <p className="p-0 m-0">
+              Después de esto podra agregar imagenes y mas información a su
+              negocio
+            </p>
+            <button type="submit" class="btn btn-primary mt-2">
+              Crear tu negocio
+            </button>
           </div>
-          <div class="form-group">
-            <label for="description">Descripción</label>
-            <textarea class="form-control" id="description" rows="3"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">
-            Crear tu negocio
-          </button>
         </form>
       </>
     );
