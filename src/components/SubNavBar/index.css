@@ -1,8 +1,8 @@
-
 .sub-navbar {
-  z-index: -1;
+  font-family: OpenSans;
   display: block;
   background: rgb(5, 24, 67);
+  font-size: 12px;
 }
 
 .create-store-button {

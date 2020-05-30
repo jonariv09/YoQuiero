@@ -1,4 +1,6 @@
 .main-navbar {
+  font-size: 13px;
+  font-family: OpenSans;
   padding: 8px 16px 0px 16px;
   display: block;
   background-color: rgb(243, 243, 243);
@@ -9,11 +11,16 @@
   width: 200px;
 }
 
+.input-main-search {
+  border-right: none;
+}
+
 .icon-main-search {
   color: white;
 }
 
 .search-text-group {
+  border: none;
   background: rgb(255, 120, 1);
 }
 
@@ -21,8 +28,13 @@
   border-radius: 10px;
 }
 
-.item, .icon-item {
-  color: rgb(136, 135, 135);
+.item, .icon-item, .icon-link-navbar {
+  color: rgb(102, 102, 102);
+}
+
+.icon-link-navbar:hover {
+  color: rgb(158, 158, 158);
+  text-decoration: none;
 }
 
 .item {
@@ -47,6 +59,7 @@
 }
 
 .sub-nav-bar {
+  font-weight: bold;
   background-color: rgb(255, 120, 1);
   margin: 0 -16px;
 }

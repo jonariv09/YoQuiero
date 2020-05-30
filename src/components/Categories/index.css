@@ -1,5 +1,7 @@
+
 .categories {
-  /* background: rgb(243, 202, 174); */
+  font-family: 'OpenSans';
+  font-size: 13px;
 }
 
 .categories li {
@@ -10,9 +12,8 @@
 .categories > .item-categories > .link-categories {
   display: block;
   width: 100%;
-  padding: .1rem 1rem;
-  font-size: 15px;
-  color: rgba(0, 0, 0, 0.6);
+  padding: .2rem 0;
+  color: black;
 }
 
 .categories > .item-categories > .link-categories:hover {

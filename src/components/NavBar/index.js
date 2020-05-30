@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./index.css";
 
-import Logo from "../../assets/logo.jpeg";
-import SpanishImage from "../../assets/spanish_language.png";
-import EnglishImage from "../../assets/english_language.png";
+import Logo from "../../assets/images/logo.png";
+import SpanishImage from "../../assets/images/spanish_language.png";
+import EnglishImage from "../../assets/images/english_language.png";
 import { FiUser } from "react-icons/fi";
 import {
   AiOutlineQuestionCircle,
@@ -24,11 +24,12 @@ export default class NavBar extends Component {
             <div className="col-xl-3 d-flex align-items-center">
               <img src={Logo} className="img-logo" alt="" />
 
-              <div class="dropdown ml-4">
+              <div className="dropdown ml-4">
                 <img
                   src={SpanishImage}
                   alt="..."
-                  class="rounded-circle language-icon mr-5 dropdown-toggle language-dropdown"
+                  className="rounded-circle language-icon mr-5 dropdown-toggle language-dropdown"
+                  href="#"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
                   aria-haspopup="true"
@@ -49,15 +50,16 @@ export default class NavBar extends Component {
             </div>
 
             <div className="col-xl-4 ml-auto d-flex align-items-center">
-              <div class="input-group input-group-sm">
+              <div className="input-group input-group-sm">
                 <input
                   type="text"
                   class="form-control form-control-main-search"
                   aria-label="Sizing example input"
-                  placeholder="Buscar"
+                  placeholder="celular iphone x"
                 />
                 <div class="input-group-append search-group-append">
-                  <span
+                  <a
+                    href="#"
                     class="input-group-text search-text-group"
                     id="inputGroup-sizing-sm"
                   >
@@ -65,33 +67,36 @@ export default class NavBar extends Component {
                       className="icon-main-search"
                       size={styles.iconSize}
                     />
-                  </span>
+                  </a>
                 </div>
               </div>
             </div>
 
             <div className="col-xl-4 ml-auto d-flex align-items-center">
               <div className="ml-auto d-flex justify-content-center">
-                <div className="item">
+                <a href="#" class="item icon-link-navbar">
                   <FiUser size={styles.iconSize} className="icon-item mr-2" />
                   Perfil
-                </div>
+                </a>
                 <div className="mr-auto divider"> </div>
 
-                <div className="item">
+                <a href="#" class="item icon-link-navbar">
                   <AiOutlineQuestionCircle
                     size={styles.iconSize}
                     className="icon-item mr-2"
                   />
                   Ayuda
-                </div>
+                </a>
                 <div className="mr-auto divider"></div>
+
                 <div className="item position-relative">
-                  <AiOutlineShoppingCart
-                    size={styles.iconSize}
-                    className="icon-item mr-2"
-                  />
-                  Carro
+                  <a href="#" class="icon-link-navbar">
+                    <AiOutlineShoppingCart
+                      size={styles.iconSize}
+                      className="icon-item mr-2"
+                    />
+                    Carro
+                  </a>
                   <span class="badge badge-shopping-cart"> 2 </span>
                 </div>
               </div>

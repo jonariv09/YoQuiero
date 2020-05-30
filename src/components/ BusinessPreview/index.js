@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import BannerPreview from "../../assets/banner-preview.jpg";
 import {
   FiMoreHorizontal,
   FiPenTool,
@@ -8,7 +7,8 @@ import {
   FiStar,
   FiSearch
 } from "react-icons/fi";
-import StorePicture from '../../assets/StorePicture.png'
+import BannerPreview from "../../assets/images/banner-preview.jpg";
+import StorePicture from "../../assets/images/StorePicture.png";
 import "./index.css";
 import "./overwrite.css";
 
@@ -124,13 +124,14 @@ export default class BusinessPreview extends Component {
 
                 <div className="icons-container pt-2">
                   <div className="item-icons-container mx-2 d-flex align-items-center">
-                    <FiImage className="icon-announcement mr-1"/> Nueva foto
+                    <FiImage className="icon-announcement mr-1" /> Nueva foto
                   </div>
                   <div className="item-icons-container mx-2 d-flex align-items-center">
-                    <FiClock className="icon-announcement mr-1"/> Próximamente
+                    <FiClock className="icon-announcement mr-1" /> Próximamente
                   </div>
                   <div className="item-icons-container mx-2 d-flex align-items-center">
-                    <FiStar className="icon-announcement mr-1"/> Producto estrella
+                    <FiStar className="icon-announcement mr-1" /> Producto
+                    estrella
                   </div>
                 </div>
               </div>

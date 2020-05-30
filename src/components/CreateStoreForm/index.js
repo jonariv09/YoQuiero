@@ -8,12 +8,12 @@ export default class CreateStoreForm extends Component {
     return (
       <>
         <form className="card create-store-form p-3">
-          <div className="header-form pb-2 d-flex">
+          <div className="header-form pb-2 d-flex justify-content-between">
             <div>
-              <span class="h3 font-weight-bold"> Crear tu tienda </span>
-              <span class="lead font-weight-bold">
+              <p class="h3 font-weight-bold"> Crear tu tienda </p>
+              <p class="lead font-weight-bold">
                 Información de la tienda
-              </span>
+              </p>
             </div>
             <div>
               <FiHelpCircle />

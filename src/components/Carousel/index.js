@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Banner1 from "../../assets/banner1.jpg";
-import Banner2 from "../../assets/banner2.png";
-import Banner3 from "../../assets/banner3.jpg";
+import Banner1 from "../../assets/images/banner1.jpg";
+import Banner2 from "../../assets/images/banner2.png";
+import Banner3 from "../../assets/images/banner3.jpg";
 
 export default class Carousel extends Component {
   render() {
