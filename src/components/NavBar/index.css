@@ -2,6 +2,7 @@
   padding: 8px 16px 0px 16px;
   display: block;
   background-color: rgb(243, 243, 243);
+  z-index: 1;
 }
 
 .img-logo {
@@ -33,11 +34,6 @@
   cursor: pointer;
 }
 
-.divider {
-  width: 1px;
-  background: rgb(202, 202, 202);
-}
-
 .language-icon {
   width: 2em;
 }
@@ -55,13 +51,6 @@
   margin: 0 -16px;
 }
 
-.sub-nav-bar-link {
-  font-size: 12px;
-  color: white;
+.divider-sub-navbar {
+  height: 80%;
 }
-
-.sub-nav-bar-link:hover {
-  text-decoration: none;
-  color: white;
-}
-

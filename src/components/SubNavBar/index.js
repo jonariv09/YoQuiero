@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FcShop } from "react-icons/fc";
 import "./index.css";
-import '../../css/GeneralStyles.css'
+
 
 export default class SubNavBar extends Component {
   render() {
@@ -27,7 +27,7 @@ export default class SubNavBar extends Component {
             </div>
 
             <div className="col-xl-5 d-flex justify-content-center align-items-center">
-              <span className="link text-light mr-1"> ¿Todavia no tienes una cuenta? </span> <a href="https://www.google.com"> Registrate gratis </a>
+              <span className="link text-light mr-1"> ¿Todavía no tienes una cuenta? </span> <a href="https://www.google.com"> Registrate gratis </a>
             </div>
           </div>
         </nav>

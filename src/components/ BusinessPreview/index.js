@@ -10,7 +10,7 @@ import {
 } from "react-icons/fi";
 import StorePicture from '../../assets/StorePicture.png'
 import "./index.css";
-import "./overview.css";
+import "./overwrite.css";
 
 export default class BusinessPreview extends Component {
   render() {

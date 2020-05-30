@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
 const Home = lazy(() => import("./Pages/Home"));
 const CreateStore = lazy(() => import("./Pages/CreateStore"));
 
