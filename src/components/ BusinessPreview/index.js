@@ -26,33 +26,33 @@ export default class BusinessPreview extends Component {
               width="100%"
             />
             <div className="px-3 d-flex align-items-end business-name-container">
-              <img src={StorePicture} class="img-thumbnail" alt="" />
+              <img src={StorePicture} className="img-thumbnail" alt="" />
               <div className="ml-3 mb-4">
                 <p className="m-0 font-weight-bold"> Nombre de tu negocio </p>
                 <p className="m-0 font-weight-light"> Categoría </p>
               </div>
             </div>
 
-            <nav class="navbar-business-preview navbar navbar-expand-lg p-0">
+            <nav className="navbar-business-preview navbar navbar-expand-lg p-0">
               <ul className="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
+                <li className="nav-item active">
+                  <a className="nav-link" href="#">
                     Mis productos
                   </a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
+                <li className="nav-item active">
+                  <a className="nav-link" href="#">
                     Ventas
                   </a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
+                <li className="nav-item active">
+                  <a className="nav-link" href="#">
                     Crear publicidad
                   </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle"
                     href="#"
                     id="navbarDropdown"
                     role="button"
@@ -62,15 +62,15 @@ export default class BusinessPreview extends Component {
                   >
                     Ver más
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">
+                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a className="dropdown-item" href="#">
                       Action
                     </a>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Another action
                     </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="#">
                       Something else here
                     </a>
                   </div>
@@ -78,20 +78,20 @@ export default class BusinessPreview extends Component {
               </ul>
 
               <ul className="navbar-nav ml-3">
-                <li class="nav-item icon-item-shadow active">
-                  <a class="nav-link icon-link-shadow" href="#">
+                <li className="nav-item icon-item-shadow active">
+                  <a className="nav-link icon-link-shadow" href="#">
                     <FiSearch />
                   </a>
                 </li>
 
-                <li class="nav-item icon-item-shadow active">
-                  <a class="nav-link icon-link-shadow" href="#">
+                <li className="nav-item icon-item-shadow active">
+                  <a className="nav-link icon-link-shadow" href="#">
                     <FiMoreHorizontal />
                   </a>
                 </li>
 
-                <li class="nav-item active">
-                  <a class="nav-link icon-link" href="#">
+                <li className="nav-item active">
+                  <a className="nav-link icon-link" href="#">
                     <FiPenTool className="mr-1" />
                     Editar perfil
                   </a>
@@ -111,10 +111,10 @@ export default class BusinessPreview extends Component {
               </div>
 
               <div className="announcement-section px-3 py-2">
-                <div class="form-group m-1">
+                <div className="form-group m-1">
                   <input
                     type="text"
-                    class="form-control announcement-input"
+                    className="form-control announcement-input"
                     id="announcement"
                     name="announcement"
                     placeholder="Anuncio"

@@ -9,18 +9,18 @@ export default class Carousel extends Component {
       <>
         <div
           id="carouselExampleSlidesOnly"
-          class="carousel slide"
+          className="carousel slide"
           data-ride="carousel"
         >
-          <div class="carousel-inner rounded">
-            <div class="carousel-item active">
-              <img src={Banner1} class="d-block w-100" alt="..." />
+          <div className="carousel-inner rounded">
+            <div className="carousel-item active">
+              <img src={Banner1} className="d-block w-100" alt="..." />
             </div>
-            <div class="carousel-item">
-              <img src={Banner2} class="d-block w-100" alt="..." />
+            <div className="carousel-item">
+              <img src={Banner2} className="d-block w-100" alt="..." />
             </div>
-            <div class="carousel-item">
-              <img src={Banner3} class="d-block w-100" alt="..." />
+            <div className="carousel-item">
+              <img src={Banner3} className="d-block w-100" alt="..." />
             </div>
           </div>
         </div>

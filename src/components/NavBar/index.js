@@ -19,7 +19,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <>
-        <nav class="navbar navbar-expand-lg main-navbar flex-row">
+        <nav className="navbar navbar-expand-lg main-navbar flex-row">
           <div className="row py-1">
             <div className="col-xl-3 d-flex align-items-center">
               <img src={Logo} className="img-logo" alt="" />
@@ -36,12 +36,12 @@ export default class NavBar extends Component {
                   aria-expanded="false"
                 />
 
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item d-flex align-items-center" href="#">
+                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a className="dropdown-item d-flex align-items-center" href="#">
                     <img
                       src={EnglishImage}
                       alt="..."
-                      class="rounded-circle language-icon mr-2"
+                      className="rounded-circle language-icon mr-2"
                     />
                     English
                   </a>
@@ -53,14 +53,14 @@ export default class NavBar extends Component {
               <div className="input-group input-group-sm">
                 <input
                   type="text"
-                  class="form-control form-control-main-search"
+                  className="form-control form-control-main-search"
                   aria-label="Sizing example input"
                   placeholder="celular iphone x"
                 />
-                <div class="input-group-append search-group-append">
+                <div className="input-group-append search-group-append">
                   <a
                     href="#"
-                    class="input-group-text search-text-group"
+                    className="input-group-text search-text-group"
                     id="inputGroup-sizing-sm"
                   >
                     <AiOutlineSearch
@@ -74,13 +74,13 @@ export default class NavBar extends Component {
 
             <div className="col-xl-4 ml-auto d-flex align-items-center">
               <div className="ml-auto d-flex justify-content-center">
-                <a href="#" class="item icon-link-navbar">
+                <a href="#" className="item icon-link-navbar">
                   <FiUser size={styles.iconSize} className="icon-item mr-2" />
                   Perfil
                 </a>
                 <div className="mr-auto divider"> </div>
 
-                <a href="#" class="item icon-link-navbar">
+                <a href="#" className="item icon-link-navbar">
                   <AiOutlineQuestionCircle
                     size={styles.iconSize}
                     className="icon-item mr-2"
@@ -90,14 +90,14 @@ export default class NavBar extends Component {
                 <div className="mr-auto divider"></div>
 
                 <div className="item position-relative">
-                  <a href="#" class="icon-link-navbar">
+                  <a href="#" className="icon-link-navbar">
                     <AiOutlineShoppingCart
                       size={styles.iconSize}
                       className="icon-item mr-2"
                     />
                     Carro
                   </a>
-                  <span class="badge badge-shopping-cart"> 2 </span>
+                  <span className="badge badge-shopping-cart"> 2 </span>
                 </div>
               </div>
             </div>

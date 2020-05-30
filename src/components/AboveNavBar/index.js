@@ -5,7 +5,7 @@ export default class AboveNavBar extends Component {
   render() {
     return (
       <>
-        <nav class="navbar navbar-expand-lg above-navbar">
+        <nav className="navbar navbar-expand-lg above-navbar">
           <div className="d-flex ml-auto">
           <div className="d-flex justify-content-center align-items-center">
               <a href="" className="nav-bar-link above-nav-bar-link">

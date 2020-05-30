@@ -10,8 +10,8 @@ export default class CreateStoreForm extends Component {
         <form className="card create-store-form p-3">
           <div className="header-form pb-2 d-flex justify-content-between">
             <div>
-              <p class="h3 font-weight-bold"> Crear tu tienda </p>
-              <p class="lead font-weight-bold">
+              <p className="h3 font-weight-bold"> Crear tu tienda </p>
+              <p className="lead font-weight-bold">
                 Información de la tienda
               </p>
             </div>
@@ -21,23 +21,23 @@ export default class CreateStoreForm extends Component {
           </div>
 
           <div className="body-form">
-            <div class="form-group">
-              <label for="name">Nombre de tu negocio</label>
-              <input type="text" class="form-control" id="name" />
+            <div className="form-group">
+              <label htmlFor="name">Nombre de tu negocio</label>
+              <input type="text" className="form-control" id="name" />
             </div>
-            <div class="form-group">
-              <label for="category">Categoría</label>
-              <input type="text" class="form-control" id="category" />
+            <div className="form-group">
+              <label htmlFor="category">Categoría</label>
+              <input type="text" className="form-control" id="category" />
             </div>
 
-            <div class="form-group">
-              <label for="department">Departamento</label>
-              <input type="text" class="form-control" id="department" />
+            <div className="form-group">
+              <label htmlFor="department">Departamento</label>
+              <input type="text" className="form-control" id="department" />
             </div>
-            <div class="form-group">
-              <label for="description">Descripción</label>
+            <div className="form-group">
+              <label htmlFor="description">Descripción</label>
               <textarea
-                class="form-control"
+                className="form-control"
                 id="description"
                 rows="3"
               ></textarea>
@@ -49,7 +49,7 @@ export default class CreateStoreForm extends Component {
               Después de esto podra agregar imagenes y mas información a su
               negocio
             </p>
-            <button type="submit" class="btn btn-primary mt-2">
+            <button type="submit" className="btn btn-primary mt-2">
               Crear tu negocio
             </button>
           </div>
