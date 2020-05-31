@@ -2,3 +2,12 @@
   box-shadow: none;
   border-color: #ced4da;
 }
+
+.dropdown-menu {
+  font-size: inherit;
+  border-radius: 0;
+}
+
+.btn:focus {
+  box-shadow: none;
+}

@@ -7,7 +7,7 @@ export default class SubNavBar extends Component {
   render() {
     return (
       <>
-        <nav class="navbar sub-navbar">
+        <nav className="navbar sub-navbar">
           <div className="row">
             <div className="col-xl-2">
               <a className="create-store-button btn-ghost" href="https://www.google.com">

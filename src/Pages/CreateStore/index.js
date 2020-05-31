@@ -3,7 +3,7 @@ import "./index.css";
 import NavBar from "../../components/NavBar";
 import CreateStoreForm from "../../components/CreateStoreForm";
 import AboveNavBar from "../../components/AboveNavBar";
-import BusinessPreview from "../../components/ BusinessPreview";
+import BusinessPreview from "../../components/BusinessPreview";
 
 export default class CreateStore extends Component {
   render() {
