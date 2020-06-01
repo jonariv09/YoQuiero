@@ -74,13 +74,13 @@ export default class NavBar extends Component {
 
             <div className="col-xl-4 ml-auto d-flex align-items-center">
               <div className="ml-auto d-flex justify-content-center">
-                <a href="#" className="item icon-link-navbar">
+                <a href="/404" className="item icon-link-navbar">
                   <FiUser size={styles.iconSize} className="icon-item mr-2" />
                   Perfil
                 </a>
                 <div className="mr-auto divider"> </div>
 
-                <a href="#" className="item icon-link-navbar">
+                <a href="/404" className="item icon-link-navbar">
                   <AiOutlineQuestionCircle
                     size={styles.iconSize}
                     className="icon-item mr-2"
@@ -90,7 +90,7 @@ export default class NavBar extends Component {
                 <div className="mr-auto divider"></div>
 
                 <div className="item position-relative">
-                  <a href="#" className="icon-link-navbar">
+                  <a href="/404" className="icon-link-navbar">
                     <AiOutlineShoppingCart
                       size={styles.iconSize}
                       className="icon-item mr-2"
@@ -106,7 +106,7 @@ export default class NavBar extends Component {
           <div className="sub-nav-bar d-flex justify-content-center">
             <div className="d-flex justify-content-center align-items-center dropdown">
               <a
-                href="#"
+                href="/404"
                 className="nav-bar-link dropdown-toggle"
                 id="navbarDropdown"
                 data-toggle="dropdown"
@@ -131,43 +131,43 @@ export default class NavBar extends Component {
             </div>
 
             <div className="d-flex justify-content-center align-items-center">
-              <a href="" className="nav-bar-link">
+              <a href="/404" className="nav-bar-link">
                 Novedades
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
             <div className="d-flex justify-content-center align-items-center">
-              <a href="" className="nav-bar-link">
+              <a href="/404" className="nav-bar-link">
                 Nuevos productos
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
             <div className="d-flex justify-content-center align-items-center">
-              <a href="" className="nav-bar-link">
+              <a href="/404" className="nav-bar-link">
                 Comida
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
             <div className="d-flex justify-content-center align-items-center">
-              <a href="" className="nav-bar-link">
+              <a href="/404" className="nav-bar-link">
                 Ropa
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
             <div className="d-flex justify-content-center align-items-center">
-              <a href="" className="nav-bar-link">
+              <a href="/404" className="nav-bar-link">
                 Envíos
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
             <div className="d-flex justify-content-center align-items-center">
-              <a href="" className="nav-bar-link">
+              <a href="/404" className="nav-bar-link">
                 Servicios
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
             <div className="d-flex justify-content-center align-items-center">
-              <a href="" className="nav-bar-link">
+              <a href="/404" className="nav-bar-link">
                 Lo más vendido
               </a>
             </div>

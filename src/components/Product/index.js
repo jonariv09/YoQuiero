@@ -11,7 +11,7 @@ export default class Product extends Component {
     return (
       <>
         <div>
-          <a href="#">
+          <a href="/404">
             <img src={this.props.image} className="rounded" alt="" />
           </a>
           <span className="d-block pt-1"> C$ 00.00 </span>

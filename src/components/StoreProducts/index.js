@@ -17,7 +17,7 @@ export default class StoreProducts extends Component {
           <div className="products-container">
             {
               [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((index, value) => (
-                <a href="#" className="my-2">
+                <a href="/404" className="my-2">
                   <img className="thumbnail-products" src={photo} />
                 </a>
               ))
