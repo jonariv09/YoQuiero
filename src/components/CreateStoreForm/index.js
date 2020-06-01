@@ -1,19 +1,39 @@
 import React, { Component } from "react";
 import { FiHelpCircle } from "react-icons/fi";
+import { Redirect } from "react-router-dom";
 import "./index.css";
 import "./overwrite.css";
 
 export default class CreateStoreForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      redirect: null,
+      name: '',
+      category: ''
+    }
+
+    this.handleCreateStore = this.handleCreateStore.bind(this);
+  }
+
+  handleCreateStore() {
+    this.setState({ redirect: "/storeProfile" })
+    console.log('dfdf')
+  }
+
   render() {
+
+    if(this.state.redirect) {
+      return <Redirect to={this.state.redirect} />
+    }
+
     return (
       <>
-        <form className="card create-store-form p-3">
+        <form className="card create-store-form p-3" onSubmit={this.handleCreateStore}>
           <div className="header-form pb-2 d-flex justify-content-between">
             <div>
               <p className="h3 font-weight-bold"> Crear tu tienda </p>
-              <p className="lead font-weight-bold">
-                Información de la tienda
-              </p>
+              <p className="lead font-weight-bold">Información de la tienda</p>
             </div>
             <div>
               <FiHelpCircle />

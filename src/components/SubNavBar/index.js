@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { FcShop } from "react-icons/fc";
 import "./index.css";
 import "./overwrite.css";
-// import Facebook from "../../assets/images/facebook.svg";
-// import Twitter from "../../assets/images/twitter.svg";
-// import Google from "../../assets/images/google.svg";
 
 import {FaFacebookF, FaTwitter, FaGoogle} from "react-icons/fa";
 
@@ -98,9 +95,9 @@ export default class SubNavBar extends Component {
                     </form>
                   </div>
                   <div class="modal-footer d-flex justify-content-center pt-0">
-                    <button type="button" class="btn btn-primary">
+                    <a href="/createStore" class="btn btn-primary">
                       Registrarse
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -108,23 +105,20 @@ export default class SubNavBar extends Component {
 
             <div className="col-xl-2 d-flex align-items-center">
               <a className="link text-light" href="/404">
-                {" "}
-                Especiales de hoy{" "}
+                Especiales de hoy
               </a>
             </div>
 
             <div className="col-xl-2 d-flex align-items-center">
               <a className="link text-light" href="/404">
-                {" "}
-                Servicio al cliente{" "}
+                Servicio al cliente
               </a>
             </div>
 
             <div className="col-xl-5 d-flex justify-content-center align-items-center">
               <span className="link text-light mr-1">
-                {" "}
-                ¿Todavía no tienes una cuenta?{" "}
-              </span>{" "}
+                ¿Todavía no tienes una cuenta?
+              </span>
               <a href="/404"> Registrate gratis </a>
             </div>
           </div>
