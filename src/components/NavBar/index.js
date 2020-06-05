@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./index.css";
+import "./index.scss";
 
 import Logo from "../../assets/images/logo.png";
 import SpanishImage from "../../assets/images/spanish_language.png";

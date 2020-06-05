@@ -9,8 +9,8 @@ import {
 } from "react-icons/fi";
 import BannerPreview from "../../assets/images/banner-preview.jpg";
 import StorePicture from "../../assets/images/StorePicture.png";
-import "./index.css";
-import "./overwrite.css";
+import "./index.scss";
+import "./overwrite.scss";
 
 export default class BusinessPreview extends Component {
   render() {

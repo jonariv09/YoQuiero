@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Product from "../../components/Product";
 import ProductImage from "../../assets/images/product.jpg";
-import './index.css'
+import './index.scss'
 
 class FeaturedProducts extends Component {
   render() {

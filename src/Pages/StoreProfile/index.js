@@ -11,9 +11,8 @@ import {
   FiClock
 } from "react-icons/fi";
 import StoreProducts from "../../components/StoreProducts";
-import "../../components/BusinessPreview/index.css";
-import "./index.css";
-import "./overview.css";
+import "./index.scss";
+import "./overwrite.scss";
 
 export default class StoreProfile extends Component {
   constructor(props) {

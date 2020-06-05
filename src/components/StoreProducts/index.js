@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import photo from '../../assets/images/product.jpg'
-import './index.css'
+import './index.scss'
 
 export default class StoreProducts extends Component {
   render() {

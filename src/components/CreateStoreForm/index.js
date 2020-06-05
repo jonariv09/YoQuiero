@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { FiHelpCircle } from "react-icons/fi";
 import { Redirect } from "react-router-dom";
-import "./index.css";
-import "./overwrite.css";
+import "./index.scss";
+import "./overwrite.scss";
 
 export default class CreateStoreForm extends Component {
   constructor(props) {
