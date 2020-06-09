@@ -7,7 +7,7 @@ import FeaturedProducts from '../../components/FeaturedProducts'
 import Footer from '../../components/Footer'
 import AboveNavBar from "../../components/AboveNavBar";
 import SubNavBar from "../../components/SubNavBar";
-import './index.css'
+import './index.scss'
 
 export default function Home() {
   return (

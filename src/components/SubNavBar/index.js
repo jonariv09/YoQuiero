@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FcShop } from "react-icons/fc";
-import "./index.css";
-import "./overwrite.css";
+import "./index.scss";
+import "./overwrite.scss";
 
 import {FaFacebookF, FaTwitter, FaGoogle} from "react-icons/fa";
 

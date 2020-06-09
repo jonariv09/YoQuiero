@@ -5,7 +5,7 @@ import {
   FaWhatsappSquare,
   FaTwitterSquare
 } from "react-icons/fa";
-import "./index.css";
+import "./index.scss";
 
 let iconStyles = {
   fontSize: 20

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Product from "../Product";
 import ProductImage from "../../assets/images/product2.jpg";
-import './index.css'
+import './index.scss'
 
 export default class InterestingProducts extends Component {
   render() {
