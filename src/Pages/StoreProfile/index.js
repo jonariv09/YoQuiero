@@ -8,7 +8,8 @@ import {
   FiPenTool,
   FiStar,
   FiImage,
-  FiClock
+  FiClock,
+  FiCamera
 } from "react-icons/fi";
 import StoreProducts from "../../components/StoreProducts";
 import "./index.scss";
@@ -30,12 +31,6 @@ export default class StoreProfile extends Component {
 
         <div className="card-business-preview">
           <div className="card-header">
-            {/* <img
-              src={BannerPreview}
-              className="banner-business-preview"
-              alt=""
-              width="100%"
-            /> */}
             <div className="banner-business-preview"></div>
             <div className="px-3 d-flex align-items-end business-name-container">
               <div className="thumbnail">
@@ -46,6 +41,7 @@ export default class StoreProfile extends Component {
                     alt=""
                   />
                 )}
+                <FiCamera className="icon-thumbnail" />
               </div>
               <div className="ml-3 mb-4">
                 <p className="m-0 font-weight-bold"> Nombre de tu negocio </p>

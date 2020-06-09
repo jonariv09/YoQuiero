@@ -12,53 +12,54 @@
   font-family: Roboto;
   border-radius: 10px;
   background: white;
+
+  
+  .banner-business-preview {
+    height: 15rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgb(235, 87, 87);
+  }
+  
+  
+  
+  .business-name-container {
+    position: absolute;
+    bottom: 1em;
+  }
+  
+  .thumbnail {
+    height: 130px;
+    width: 130px;
+    border-radius: 10px;
+    background-color: rgb(243, 154, 74);
+    border: none;
+    box-shadow: 0 5px 6px -2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .img-thumbnail {
+    padding: 0;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    border: inherit;
+  }
+  
+  .navbar-business-preview {
+    font-size: 14px;
+    justify-content: flex-end;
+  }
+  
+  .icon-link-shadow {
+    padding: .2em .4em;
+    border-radius: 45%;
+    background-color: rgb(196, 196, 196);
+  }
+
 }
 
-.banner-business-preview {
-  height: 15rem;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
-  background-color: rgb(235, 87, 87);
-}
 
-.card-header {
-  padding: 0;
-  position: relative;
-}
-
-.business-name-container {
-  position: absolute;
-  bottom: 1em;
-}
-
-.thumbnail {
-  height: 130px;
-  width: 130px;
-  border-radius: 10px;
-  background-color: rgb(243, 154, 74);
-  border: none;
-  box-shadow: 0 5px 6px -2px rgba(0, 0, 0, 0.3);
-}
-
-.img-thumbnail {
-  padding: 0;
-  height: inherit;
-  width: inherit;
-  border-radius: inherit;
-  border: inherit;
-}
-
-.navbar-business-preview {
-  font-size: 14px;
-  justify-content: flex-end;
-}
-
-.icon-link-shadow {
-  padding: .2em .4em;
-  border-radius: 45%;
-  background-color: rgb(196, 196, 196);
-}
 
 .main-section {
   font-size: 15px;
