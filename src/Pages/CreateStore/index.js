@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./index.css";
+import "./index.scss";
 import NavBar from "../../components/NavBar";
 import CreateStoreForm from "../../components/CreateStoreForm";
 import AboveNavBar from "../../components/AboveNavBar";

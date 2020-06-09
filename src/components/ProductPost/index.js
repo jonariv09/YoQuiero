@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PostImage from "../../assets/images/men-s-gray-and-black-button-up-shirt-on-mannequin-1086711.jpg";
 import { FiGrid } from "react-icons/fi";
-import "./index.css";
-import "./overwrite.css";
+import "./index.scss";
+import "./overwrite.scss";
 
 export default class ProductPost extends Component {
   render() {

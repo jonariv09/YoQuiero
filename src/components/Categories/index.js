@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {FiChevronRight} from 'react-icons/fi'
-import './index.css'
+import './index.scss'
 
 const icons = {
   fontSize: 14

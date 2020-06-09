@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NotFoundBanner from "../../assets/images/404.png";
-import './index.css'
+import './index.scss'
 
 export default class NotFound extends Component {
   render() {
