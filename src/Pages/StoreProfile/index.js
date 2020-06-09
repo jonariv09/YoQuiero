@@ -12,6 +12,9 @@ import {
   FiCamera
 } from "react-icons/fi";
 import StoreProducts from "../../components/StoreProducts";
+
+import Wallpaper from "../../assets/images/wallpaper.jpg";
+
 import "./index.scss";
 import "./overwrite.scss";
 
@@ -19,8 +22,15 @@ export default class StoreProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: null
+      coverPicture: Wallpaper,
+      profilePicture: null
     };
+
+    this.handleUploadImage = this.handleUploadImage.bind(this);
+  }
+
+  handleUploadImage() {
+    this.refs.fileUploader.click();
   }
 
   render() {
@@ -31,24 +41,52 @@ export default class StoreProfile extends Component {
 
         <div className="card-business-preview">
           <div className="card-header">
-            <div className="banner-business-preview">
-              <a href="/404" className="upload-picture-icon">
-                <FiCamera />
-              </a>
-            </div>
+            {this.state.coverPicture ? (
+              <div className="banner-bussines d-flex justify-content-center">
+                <img
+                  src={this.state.coverPicture}
+                  className="banner-bussines-image"
+                  alt="#"
+                />
+                <button
+                  className="upload-picture-icon"
+                  onClick={this.handleUploadImage}
+                >
+                  <FiCamera />
+                </button>
+              </div>
+            ) : (
+              <div className="banner-bussines-default">
+                <button
+                  className="upload-picture-icon"
+                  onClick={this.handleUploadImage}
+                >
+                  <FiCamera />
+                </button>
+              </div>
+            )}
+
             <div className="px-3 d-flex align-items-end business-name-container">
               <div className="thumbnail">
-                {this.state.image && (
+                {this.state.profilePicture && (
                   <img
                     className="img-thumbnail"
                     src={this.state.image}
                     alt=""
                   />
                 )}
-                <a href="/404" className="upload-picture-icon">
-                  {" "}
-                  <FiCamera />{" "}
-                </a>
+                <button
+                  className="upload-picture-icon"
+                  onClick={this.handleUploadImage}
+                >
+                  <FiCamera />
+                </button>
+                <input
+                  type="file"
+                  id="file"
+                  ref="fileUploader"
+                  style={{ display: "none" }}
+                />
               </div>
               <div className="ml-3 mb-4">
                 <p className="m-0 font-weight-bold"> Nombre de tu negocio </p>
@@ -170,7 +208,7 @@ export default class StoreProfile extends Component {
             </div>
 
             {[1, 2, 3, 4, 5].map((value, index) => (
-              <ProductPost />
+              <ProductPost key={value} />
             ))}
           </div>
 
