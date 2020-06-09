@@ -31,7 +31,11 @@ export default class StoreProfile extends Component {
 
         <div className="card-business-preview">
           <div className="card-header">
-            <div className="banner-business-preview"></div>
+            <div className="banner-business-preview">
+              <a href="/404" className="upload-picture-icon">
+                <FiCamera />
+              </a>
+            </div>
             <div className="px-3 d-flex align-items-end business-name-container">
               <div className="thumbnail">
                 {this.state.image && (
@@ -41,7 +45,10 @@ export default class StoreProfile extends Component {
                     alt=""
                   />
                 )}
-                <FiCamera className="icon-thumbnail" />
+                <a href="/404" className="upload-picture-icon">
+                  {" "}
+                  <FiCamera />{" "}
+                </a>
               </div>
               <div className="ml-3 mb-4">
                 <p className="m-0 font-weight-bold"> Nombre de tu negocio </p>
@@ -136,7 +143,6 @@ export default class StoreProfile extends Component {
           </div>
 
           <div className="col-xl-6">
-
             <div className="announcement-section px-3 py-2 mb-5">
               <div className="form-group m-1">
                 <input

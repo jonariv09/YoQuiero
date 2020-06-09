@@ -8,21 +8,42 @@
     url('../../assets/fonts/Roboto-Light.ttf');
 }
 
+.upload-picture-icon {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  padding: .2em .5em;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.upload-picture-icon:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .card-business-preview {
   font-family: Roboto;
   border-radius: 10px;
   background: white;
+  position: relative;
 
-  
+
   .banner-business-preview {
     height: 15rem;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
     background-color: rgb(235, 87, 87);
+    
+    & > .upload-picture-icon {
+      bottom: 3rem;
+      right: 1rem;
+    }
   }
-  
-  
   
   .business-name-container {
     position: absolute;
@@ -30,20 +51,27 @@
   }
   
   .thumbnail {
+    z-index: 1;
+    position: relative;
     height: 130px;
     width: 130px;
     border-radius: 10px;
     background-color: rgb(243, 154, 74);
     border: none;
     box-shadow: 0 5px 6px -2px rgba(0, 0, 0, 0.3);
-  }
-  
-  .img-thumbnail {
-    padding: 0;
-    height: inherit;
-    width: inherit;
-    border-radius: inherit;
-    border: inherit;
+
+    .img-thumbnail {
+      padding: 0;
+      height: inherit;
+      width: inherit;
+      border-radius: inherit;
+      border: inherit;
+    }
+    
+    & > .upload-picture-icon {
+      bottom: .5rem;
+      right: .5rem;
+    }
   }
   
   .navbar-business-preview {
