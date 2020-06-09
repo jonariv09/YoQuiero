@@ -89,8 +89,25 @@ class CreateStore(Resource):
             return {'status': 'fail', 'message': str(e)}, 401
 
 
+class StoreView(Resource):
+    def get(self, store_id):
+        try:
+            store = Store.query.get(store_id)
+
+            store_dict = store.to_dict(rules=('-products', '-user'))
+            store_dict['user'] = store.user.to_dict(rules=('-password', '-id', '-comments', '-store'))
+            store_dict['products'] = [product.to_dict(rules=('-comments', '-store')) for product in store.products]
+
+            return {'status': 'ok',
+                    'store': store_dict}
+        except Exception as e:
+            return {'status': 'fail',
+                    'message': str(e)}, 400
+
+
 # ENDPOINTS
 api.add_resource(SignUp, '/api/signup')
 api.add_resource(Login, '/api/login')
 # api.add_resource(Logout, '/api/logout')
 api.add_resource(CreateStore, '/api/createStore')
+api.add_resource(StoreView, '/store/<string:store_id>')

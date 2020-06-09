@@ -10,7 +10,6 @@ load_dotenv()
 def encode_auth_token(user_id, username):
     """
     Generates the Auth Token
-    :return: string
     """
     try:
         payload = {
