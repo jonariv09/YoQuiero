@@ -13,8 +13,6 @@ import {
 } from "react-icons/fi";
 import StoreProducts from "../../components/StoreProducts";
 
-import Wallpaper from "../../assets/images/wallpaper.jpg";
-
 import "./index.scss";
 import "./overwrite.scss";
 
@@ -22,15 +20,31 @@ export default class StoreProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      coverPicture: Wallpaper,
-      profilePicture: null
+      coverPicture: null,
+      profilePicture: null,
     };
-
+    
     this.handleUploadImage = this.handleUploadImage.bind(this);
   }
 
-  handleUploadImage() {
-    this.refs.fileUploader.click();
+  async handleUploadImage(e) {
+    e.persist();
+
+    const formData = new FormData();
+    formData.append("file", e.target.files[0]);
+    formData.append("upload_preset", "yo_quiero");
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/djcuow5ib/image/upload",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    const imageUrl = await res.json();
+    this.setState({ ...this.state, [e.target.name]: imageUrl.secure_url });
+
+    // insercion a la base de datos del url
   }
 
   render() {
@@ -48,21 +62,35 @@ export default class StoreProfile extends Component {
                   className="banner-bussines-image"
                   alt="#"
                 />
-                <button
-                  className="upload-picture-icon"
-                  onClick={this.handleUploadImage}
+                <label
+                  htmlFor="cover-picture"
+                  className="upload-picture-icon mb-0"
                 >
                   <FiCamera />
-                </button>
+                </label>
+                <input
+                  type="file"
+                  name="coverPicture"
+                  id="cover-picture"
+                  style={{ display: "none" }}
+                  onChange={this.handleUploadImage}
+                />
               </div>
             ) : (
               <div className="banner-bussines-default">
-                <button
-                  className="upload-picture-icon"
-                  onClick={this.handleUploadImage}
+                <label
+                  htmlFor="cover-picture-default"
+                  className="upload-picture-icon mb-0"
                 >
                   <FiCamera />
-                </button>
+                </label>
+                <input
+                  type="file"
+                  name="coverPicture"
+                  id="cover-picture-default"
+                  style={{ display: "none" }}
+                  onChange={this.handleUploadImage}
+                />
               </div>
             )}
 
@@ -71,21 +99,22 @@ export default class StoreProfile extends Component {
                 {this.state.profilePicture && (
                   <img
                     className="img-thumbnail"
-                    src={this.state.image}
+                    src={this.state.profilePicture}
                     alt=""
                   />
                 )}
-                <button
-                  className="upload-picture-icon"
-                  onClick={this.handleUploadImage}
+                <label
+                  htmlFor="profile-picture"
+                  className="upload-picture-icon mb-0"
                 >
                   <FiCamera />
-                </button>
+                </label>
                 <input
                   type="file"
-                  id="file"
-                  ref="fileUploader"
+                  name="profilePicture"
+                  id="profile-picture"
                   style={{ display: "none" }}
+                  onChange={this.handleUploadImage}
                 />
               </div>
               <div className="ml-3 mb-4">
@@ -97,17 +126,17 @@ export default class StoreProfile extends Component {
             <nav className="navbar-business-preview navbar navbar-expand-lg p-0">
               <ul className="navbar-nav">
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/404">
                     Mis productos
                   </a>
                 </li>
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/404">
                     Ventas
                   </a>
                 </li>
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/404">
                     Crear publicidad
                   </a>
                 </li>
