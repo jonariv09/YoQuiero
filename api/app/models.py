@@ -31,7 +31,7 @@ class Store(db.Model, SerializerMixin):
     user = db.relationship("User", back_populates="store")
 
     # A store can have many products
-    products = db.relationship('Product', backref='store', lazy=False)
+    products = db.relationship('Product', backref='store', lazy=False, cascade="save-update, merge, delete")
 
 
 class Product(db.Model, SerializerMixin):
