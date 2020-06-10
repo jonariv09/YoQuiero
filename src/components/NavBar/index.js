@@ -55,7 +55,7 @@ export default class NavBar extends Component {
                   type="text"
                   className="form-control form-control-main-search"
                   aria-label="Sizing example input"
-                  placeholder="celular iphone x"
+                  placeholder="Buscar"
                 />
                 <div className="input-group-append search-group-append">
                   <a
