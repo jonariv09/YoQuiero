@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../build', static_url_path='/')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URl')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
@@ -18,3 +18,8 @@ migrate = Migrate(app, db)
 
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
+
+
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
