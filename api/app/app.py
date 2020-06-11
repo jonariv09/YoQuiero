@@ -8,9 +8,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(APP_ROOT, '../build/images')
+
 app = Flask(__name__, static_folder='../build', static_url_path='/')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URl')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 api = Api(app)
 db = SQLAlchemy(app)

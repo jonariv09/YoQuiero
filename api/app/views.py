@@ -1,6 +1,6 @@
 from flask_restful import Resource
 from flask import request
-from .app import api, db
+from .app import api, db, app
 from .models import User, Store, Product, Comments
 from .auth import *
 
@@ -157,8 +157,58 @@ class GetProduct(Resource):
                     'message': str(e)}, 400
 
 
+class EditStore(Resource):
+    def put(self, store_id):
+        try:
+            user = check_user_session(request)
+
+            if user.store is None:
+                raise Exception("You need to create a Store first")
+
+            if user.store.id != int(store_id):
+                raise Exception("You dont have permissions to edit this Store")
+
+            files = request.files
+
+            if 'profile_picture' in files:
+                files['profile_picture'].filename = validate_picture(files['profile_picture'])
+
+                files['profile_picture'].save(
+                    os.path.join(app.config['UPLOAD_FOLDER'], files['profile_picture'].filename))
+
+                user.store.profile_picture = files['profile_picture'].filename
+
+            if 'background_picture' in files:
+                files['background_picture'].filename = validate_picture(files['background_picture'])
+
+                files['background_picture'].save(
+                    os.path.join(app.config['UPLOAD_FOLDER'], files['background_picture'].filename))
+
+                user.store.background_picture = files['background_picture'].filename
+
+            user.store.name = request.form.get('name') if request.form.get(
+                'name') is not None else user.store.name
+            user.store.category = request.form.get('category') if request.form.get(
+                'category') is not None else user.store.category
+            user.store.description = request.form.get('description') if request.form.get(
+                'description') is not None else user.store.description
+            user.store.departamento = request.form.get('departamento') if request.form.get(
+                'departamento') is not None else user.store.departamento
+
+            db.session.commit()
+
+            return {'status': 'ok'}
+        except Exception as e:
+            return {'status': 'fail',
+                    'message': str(e)}, 400
+
+
 def check_user_session(request_):
     auth_header = request_.headers.get('Authorization')
+
+    if auth_header is None:
+        raise Exception('You must indicate Authorization token. The auth token is missing')
+
     auth_token = auth_header.split(" ")[1]
 
     user_payload = decode_auth_token(auth_token)
@@ -170,11 +220,30 @@ def check_user_session(request_):
     return user
 
 
+def allowed_file_types(content_type):
+    file_types = ['image/jpg', 'image/png', 'image/jpeg']
+    return content_type in file_types
+
+
+def validate_picture(picture):
+    if picture.filename == '':
+        raise Exception('Filename of profile picture must not be empty')
+
+    if not allowed_file_types(picture.content_type):
+        raise Exception('Only jpg and png images are supported')
+
+    file_extension = picture.filename.rsplit(".", 1)[1].lower()
+    picture.filename = datetime.now().strftime("%Y%m%d-%H%M%S%f.") + file_extension
+
+    return picture.filename
+
+
 # ENDPOINTS
 api.add_resource(SignUp, '/api/signup')
 api.add_resource(Login, '/api/login')
 # api.add_resource(Logout, '/api/logout')
 api.add_resource(CreateStore, '/api/createStore')
 api.add_resource(GetStore, '/api/getStore/<string:store_id>')
+api.add_resource(EditStore, '/api/editStore/<string:store_id>')
 api.add_resource(CreateProduct, '/api/createProduct')
 api.add_resource(GetProduct, '/api/getProduct/<string:product_id>')
