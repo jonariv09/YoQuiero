@@ -1,12 +1,4 @@
 steps:
-# Build the container image
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/yoquiero01/hello', '.']
-# Push the container image to Container Registry
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/yoquier01/hello']
-# Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'yoquiero-cloudrun-service', '--image', 'gcr.io/yoquiero01/hello', '--region', 'asia-east1', '--platform', 'managed', '--allow-unauthenticated']
-images:
-- gcr.io/yoquiero01/hello
+  args: ['app', 'deploy']
+  timeout: '1600s'
