@@ -1,8 +1,19 @@
+import cloudinary as cloud
+from cloudinary import uploader
 from flask_restful import Resource
 from flask import request
 from .app import api, db, app
 from .models import User, Store, Product, Comments
 from .auth import *
+from dotenv import load_dotenv
+
+load_dotenv()
+
+cloud.config.update = ({
+    'cloud_name': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'api_key': os.environ.get('CLOUDINARY_API_KEY'),
+    'api_secret': os.environ.get('CLOUDINARY_API_SECRET')
+})
 
 
 class SignUp(Resource):
@@ -173,18 +184,22 @@ class EditStore(Resource):
             if 'profile_picture' in files:
                 files['profile_picture'].filename = validate_picture(files['profile_picture'])
 
-                files['profile_picture'].save(
-                    os.path.join(app.config['UPLOAD_FOLDER'], files['profile_picture'].filename))
+                upload = cloud.uploader.upload(file=files['profile_picture'],
+                                               use_filename=True,
+                                               unique_filename=True,
+                                               folder='store')
 
-                user.store.profile_picture = files['profile_picture'].filename
+                user.store.profile_picture = upload['url']
 
             if 'background_picture' in files:
                 files['background_picture'].filename = validate_picture(files['background_picture'])
 
-                files['background_picture'].save(
-                    os.path.join(app.config['UPLOAD_FOLDER'], files['background_picture'].filename))
+                upload = cloud.uploader.upload(file=files['background_picture'],
+                                               use_filename=True,
+                                               unique_filename=True,
+                                               folder='store')
 
-                user.store.background_picture = files['background_picture'].filename
+                user.store.background_picture = upload['url']
 
             user.store.name = request.form.get('name') if request.form.get(
                 'name') is not None else user.store.name
