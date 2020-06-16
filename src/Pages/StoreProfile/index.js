@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
-import AboveNavBar from '../../components/AboveNavBar'
-import NavBar from '../../components/NavBar'
-import ProductPost from '../../components/ProductPost'
+
 import {
   FiSearch,
   FiMoreHorizontal,
@@ -11,6 +9,10 @@ import {
   FiClock,
   FiCamera,
 } from 'react-icons/fi'
+
+import AboveNavBar from '../../components/AboveNavBar'
+import NavBar from '../../components/NavBar'
+import ProductPost from '../../components/ProductPost'
 import StoreProducts from '../../components/StoreProducts'
 
 import './index.scss'
@@ -42,7 +44,7 @@ export default class StoreProfile extends Component {
     )
 
     const imageUrl = await res.json()
-    this.setState({...this.state, [e.target.name]: imageUrl.secure_url})
+    await this.setState({...this.state, [e.target.name]: imageUrl.secure_url})
 
     // insercion a la base de datos del url
   }
@@ -143,7 +145,7 @@ export default class StoreProfile extends Component {
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
-                    href="https://www.google.com"
+                    href="/404"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -156,14 +158,14 @@ export default class StoreProfile extends Component {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/404">
                       Action
                     </a>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/404">
                       Another action
                     </a>
                     <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/404">
                       Something else here
                     </a>
                   </div>
@@ -172,19 +174,19 @@ export default class StoreProfile extends Component {
 
               <ul className="navbar-nav ml-3">
                 <li className="nav-item icon-item-shadow active">
-                  <a className="nav-link icon-link-shadow" href="#">
+                  <a className="nav-link icon-link-shadow" href="/404">
                     <FiSearch />
                   </a>
                 </li>
 
                 <li className="nav-item icon-item-shadow active">
-                  <a className="nav-link icon-link-shadow" href="#">
+                  <a className="nav-link icon-link-shadow" href="/404">
                     <FiMoreHorizontal />
                   </a>
                 </li>
 
                 <li className="nav-item active">
-                  <a className="nav-link icon-link" href="#">
+                  <a className="nav-link icon-link" href="/404">
                     <FiPenTool className="mr-1" />
                     Editar perfil
                   </a>
@@ -195,7 +197,7 @@ export default class StoreProfile extends Component {
         </div>
 
         <div className="row main-section pt-3 px-3">
-          <div className="col-xl-4">
+          <div className="col-xl-3">
             <div className="description-section px-4 py-1 mb-2">
               <p className="m-0"> Detalles </p>
               <div className="skeleton-description-line"></div>

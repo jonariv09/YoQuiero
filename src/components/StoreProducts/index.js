@@ -9,18 +9,19 @@ export default class StoreProducts extends Component {
         <div className="products p-3">
           <div className="d-flex justify-content-between">
             <span> Productos </span>
-            <a href="/404" className="">
-              Ver todos
-            </a>
           </div>
 
           <div className="products-container">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((index, value) => (
-              <a href="/404" className="my-2" key={value}>
-                <img className="thumbnail-products" src={photo} alt="" />
+              <a href="/404" className="thumbnail my-1" key={value}>
+                <img className="thumbnail-image" src={photo} alt="" />
               </a>
             ))}
           </div>
+
+          <a href="/404" className="d-block text-right mt-2">
+            Ver mas ...
+          </a>
         </div>
       </>
     )

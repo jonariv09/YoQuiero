@@ -28,7 +28,9 @@
   border-radius: 10px;
 }
 
-.item, .icon-item, .icon-link-navbar {
+.item,
+.icon-item,
+.icon-link-navbar {
   color: rgb(102, 102, 102);
 }
 
@@ -66,4 +68,10 @@
 
 .divider-sub-navbar {
   height: 80%;
+}
+
+.item-nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
