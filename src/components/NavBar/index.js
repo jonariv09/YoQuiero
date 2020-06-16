@@ -42,7 +42,7 @@ export default class NavBar extends Component {
                 >
                   <a
                     className="dropdown-item d-flex align-items-center"
-                    href="#"
+                    href="/404"
                   >
                     <img
                       src={EnglishImage}
@@ -65,7 +65,7 @@ export default class NavBar extends Component {
                 />
                 <div className="input-group-append search-group-append">
                   <a
-                    href="#"
+                    href="/404"
                     className="input-group-text search-text-group"
                     id="inputGroup-sizing-sm"
                   >
@@ -122,57 +122,57 @@ export default class NavBar extends Component {
                 Categorías
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/404">
                   Action
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/404">
                   Another action
                 </a>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/404">
                   Something else here
                 </a>
               </div>
               <div className="divider divider-sub-navbar"> </div>
             </div>
 
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="item-nav-bar">
               <a href="/404" className="nav-bar-link">
                 Novedades
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="item-nav-bar">
               <a href="/404" className="nav-bar-link">
                 Nuevos productos
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="item-nav-bar">
               <a href="/404" className="nav-bar-link">
                 Comida
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="item-nav-bar">
               <a href="/404" className="nav-bar-link">
                 Ropa
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="item-nav-bar">
               <a href="/404" className="nav-bar-link">
                 Envíos
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="item-nav-bar">
               <a href="/404" className="nav-bar-link">
                 Servicios
               </a>
               <div className="divider divider-sub-navbar"> </div>
             </div>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="item-nav-bar">
               <a href="/404" className="nav-bar-link">
                 Lo más vendido
               </a>
