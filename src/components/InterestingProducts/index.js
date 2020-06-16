@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import Product from "../Product";
-import ProductImage from "../../assets/images/product2.jpg";
+import React, {Component} from 'react'
+import Product from '../Product'
+import ProductImage from '../../assets/images/product2.jpg'
 import './index.scss'
 
 export default class InterestingProducts extends Component {
@@ -18,6 +18,6 @@ export default class InterestingProducts extends Component {
           </div>
         </div>
       </>
-    );
+    )
   }
 }

@@ -1,16 +1,16 @@
-import React, { Component } from "react";
+import React, {Component} from 'react'
 import {
   FiMoreHorizontal,
   FiPenTool,
   FiImage,
   FiClock,
   FiStar,
-  FiSearch
-} from "react-icons/fi";
-import BannerPreview from "../../assets/images/banner-preview.jpg";
-import StorePicture from "../../assets/images/StorePicture.png";
-import "./index.scss";
-import "./overwrite.scss";
+  FiSearch,
+} from 'react-icons/fi'
+import BannerPreview from '../../assets/images/banner-preview.jpg'
+import StorePicture from '../../assets/images/StorePicture.png'
+import './index.scss'
+import './overwrite.scss'
 
 export default class BusinessPreview extends Component {
   render() {
@@ -62,7 +62,10 @@ export default class BusinessPreview extends Component {
                   >
                     Ver más
                   </a>
-                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
                     <a className="dropdown-item" href="#">
                       Action
                     </a>
@@ -139,6 +142,6 @@ export default class BusinessPreview extends Component {
           </div>
         </div>
       </>
-    );
+    )
   }
 }

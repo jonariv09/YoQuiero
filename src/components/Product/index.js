@@ -1,9 +1,8 @@
-import React, { Component } from "react";
-
+import React, {Component} from 'react'
 
 export default class Product extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {}
   }
 
@@ -17,6 +16,6 @@ export default class Product extends Component {
           <span className="d-block pt-1"> C$ 00.00 </span>
         </div>
       </>
-    );
+    )
   }
 }

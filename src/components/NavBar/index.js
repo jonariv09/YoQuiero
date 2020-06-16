@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import "./index.scss";
+import React, {Component} from 'react'
+import './index.scss'
 
-import Logo from "../../assets/images/logo.png";
-import SpanishImage from "../../assets/images/spanish_language.png";
-import EnglishImage from "../../assets/images/english_language.png";
-import { FiUser } from "react-icons/fi";
+import Logo from '../../assets/images/logo.png'
+import SpanishImage from '../../assets/images/spanish_language.png'
+import EnglishImage from '../../assets/images/english_language.png'
+import {FiUser} from 'react-icons/fi'
 import {
   AiOutlineQuestionCircle,
   AiOutlineShoppingCart,
-  AiOutlineSearch
-} from "react-icons/ai";
+  AiOutlineSearch,
+} from 'react-icons/ai'
 
 const styles = {
-  iconSize: 21
-};
+  iconSize: 21,
+}
 
 export default class NavBar extends Component {
   render() {
@@ -36,8 +36,14 @@ export default class NavBar extends Component {
                   aria-expanded="false"
                 />
 
-                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a className="dropdown-item d-flex align-items-center" href="#">
+                <div
+                  className="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <a
+                    className="dropdown-item d-flex align-items-center"
+                    href="#"
+                  >
                     <img
                       src={EnglishImage}
                       alt="..."
@@ -174,6 +180,6 @@ export default class NavBar extends Component {
           </div>
         </nav>
       </>
-    );
+    )
   }
 }

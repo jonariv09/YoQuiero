@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import AboveNavBar from "../../components/AboveNavBar";
-import NavBar from "../../components/NavBar";
-import ProductPost from "../../components/ProductPost";
+import React, {Component} from 'react'
+import AboveNavBar from '../../components/AboveNavBar'
+import NavBar from '../../components/NavBar'
+import ProductPost from '../../components/ProductPost'
 import {
   FiSearch,
   FiMoreHorizontal,
@@ -9,40 +9,40 @@ import {
   FiStar,
   FiImage,
   FiClock,
-  FiCamera
-} from "react-icons/fi";
-import StoreProducts from "../../components/StoreProducts";
+  FiCamera,
+} from 'react-icons/fi'
+import StoreProducts from '../../components/StoreProducts'
 
-import "./index.scss";
-import "./overwrite.scss";
+import './index.scss'
+import './overwrite.scss'
 
 export default class StoreProfile extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       coverPicture: null,
       profilePicture: null,
-    };
-    
-    this.handleUploadImage = this.handleUploadImage.bind(this);
+    }
+
+    this.handleUploadImage = this.handleUploadImage.bind(this)
   }
 
   async handleUploadImage(e) {
-    e.persist();
+    e.persist()
 
-    const formData = new FormData();
-    formData.append("file", e.target.files[0]);
-    formData.append("upload_preset", "yo_quiero");
+    const formData = new FormData()
+    formData.append('file', e.target.files[0])
+    formData.append('upload_preset', 'yo_quiero')
     const res = await fetch(
-      "https://api.cloudinary.com/v1_1/djcuow5ib/image/upload",
+      'https://api.cloudinary.com/v1_1/djcuow5ib/image/upload',
       {
-        method: "POST",
-        body: formData
+        method: 'POST',
+        body: formData,
       }
-    );
+    )
 
-    const imageUrl = await res.json();
-    this.setState({ ...this.state, [e.target.name]: imageUrl.secure_url });
+    const imageUrl = await res.json()
+    this.setState({...this.state, [e.target.name]: imageUrl.secure_url})
 
     // insercion a la base de datos del url
   }
@@ -72,7 +72,7 @@ export default class StoreProfile extends Component {
                   type="file"
                   name="coverPicture"
                   id="cover-picture"
-                  style={{ display: "none" }}
+                  style={{display: 'none'}}
                   onChange={this.handleUploadImage}
                 />
               </div>
@@ -88,7 +88,7 @@ export default class StoreProfile extends Component {
                   type="file"
                   name="coverPicture"
                   id="cover-picture-default"
-                  style={{ display: "none" }}
+                  style={{display: 'none'}}
                   onChange={this.handleUploadImage}
                 />
               </div>
@@ -113,7 +113,7 @@ export default class StoreProfile extends Component {
                   type="file"
                   name="profilePicture"
                   id="profile-picture"
-                  style={{ display: "none" }}
+                  style={{display: 'none'}}
                   onChange={this.handleUploadImage}
                 />
               </div>
@@ -244,6 +244,6 @@ export default class StoreProfile extends Component {
           <div className="col-xl-2"></div>
         </div>
       </>
-    );
+    )
   }
 }
