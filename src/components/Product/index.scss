@@ -1,0 +1,7 @@
+@import '../../scss/modules/variables';
+
+@media (max-width: $phone-size) {
+  .product-image {
+    width: 150px;
+  }
+}

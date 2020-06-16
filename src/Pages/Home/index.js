@@ -17,10 +17,10 @@ export default function Home() {
       <SubNavBar />
       <div className="container-fluid px-4">
         <div className="row mt-4 px-5">
-          <div className="col-xl-3">
+          <div className="col-xl-3 col-md-4 col-sm-12">
             <Categories />
           </div>
-          <div className="col-xl-9 ">
+          <div className="col-xl-9 col-md-8 col-sm-12">
             <Carousel />
           </div>
         </div>

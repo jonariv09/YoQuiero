@@ -9,9 +9,12 @@ class FeaturedProducts extends Component {
       <>
         <div className="featured-products">
           <div className="lead"> Destacado online </div>
-          <div className="row py-4 d-flex justify-content-around">
+          <div className="row py-4 d-flex">
             {[1, 2, 3, 4, 5].map((index, value) => (
-              <div key={value} className="col-xl-2">
+              <div
+                key={value}
+                className="my-2 col-xl-2 col-lg-3 col-md-4 col-sm-2"
+              >
                 <Product image={ProductImage} />
               </div>
             ))}
