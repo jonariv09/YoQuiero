@@ -87,7 +87,7 @@ class CreateStore(Resource):
 
             return {'status': 'ok',
                     'store': new_store.to_dict(rules=('-user', '-user_id', '-products')),
-                    'user': user.to_dict(rules=('-password', '-id', '-comments', '-store'))}
+                    'user': user.to_dict(rules=('-password', '-id', '-comments', '-store'))}, 201
         except jwt.ExpiredSignatureError as e:
             return {'status': 'fail',
                     'message': str(e)}, 401
@@ -123,6 +123,17 @@ class CreateProduct(Resource):
             if user.store is None:
                 raise Exception("You need to create a Store first")
 
+            files = request.files
+            upload = {}
+
+            if 'image' in files:
+                files['image'].filename = validate_picture(files['image'])
+
+                upload = cloud.uploader.upload(file=files['image'],
+                                               use_filename=True,
+                                               unique_filename=True,
+                                               folder='product')
+
             product = request.form
 
             new_product = Product(name=product['name'],
@@ -131,7 +142,7 @@ class CreateProduct(Resource):
                                   category=product['category'],
                                   date_added=datetime.now(),
                                   likes=0,
-                                  image='null',
+                                  image=upload.get('url', 'null'),
                                   store=user.store,
                                   store_id=user.store.id)
 
@@ -140,10 +151,48 @@ class CreateProduct(Resource):
 
             return {'status': 'ok',
                     'message': 'The product was added successfully',
-                    'product': new_product.to_dict(rules=('-comments', '-store'))}, 200
+                    'product': new_product.to_dict(rules=('-comments', '-store'))}, 201
         except jwt.ExpiredSignatureError as e:
             return {'status': 'fail',
                     'message': str(e)}, 401
+        except Exception as e:
+            return {'status': 'fail',
+                    'message': str(e)}, 400
+
+
+class EditProduct(Resource):
+    def put(self, product_id):
+        try:
+            user = check_user_session(request)
+
+            if user.store is None:
+                raise Exception("You need to create a Store first")
+
+            product = Product.query.get(int(product_id))
+
+            if product not in user.store.products:
+                raise Exception("This product does not exists")
+
+            image = request.files
+
+            if 'image' in image:
+                image['image'].filename = validate_picture(image['image'])
+
+                upload = cloud.uploader.upload(file=image['image'],
+                                               use_filename=True,
+                                               unique_filename=True,
+                                               folder='product')
+                product.image = upload['url']
+
+            product.name = request.form.get('name', product.name)
+            product.description = request.form.get('description', product.description)
+            product.price = float(request.form.get('price', product.price))
+            product.category = request.form.get('category', product.category)
+
+            db.session.commit()
+
+            return {'status': 'ok',
+                    'message': 'All changes saved'}, 200
         except Exception as e:
             return {'status': 'fail',
                     'message': str(e)}, 400
@@ -201,18 +250,15 @@ class EditStore(Resource):
 
                 user.store.background_picture = upload['url']
 
-            user.store.name = request.form.get('name') if request.form.get(
-                'name') is not None else user.store.name
-            user.store.category = request.form.get('category') if request.form.get(
-                'category') is not None else user.store.category
-            user.store.description = request.form.get('description') if request.form.get(
-                'description') is not None else user.store.description
-            user.store.departamento = request.form.get('departamento') if request.form.get(
-                'departamento') is not None else user.store.departamento
+            user.store.name = request.form.get('name', user.store.name)
+            user.store.category = request.form.get('category', user.store.category)
+            user.store.description = request.form.get('description', user.store.description)
+            user.store.departamento = request.form.get('departamento', user.store.departamento)
 
             db.session.commit()
 
-            return {'status': 'ok'}
+            return {'status': 'ok',
+                    'message': 'All changes saved'}, 200
         except Exception as e:
             return {'status': 'fail',
                     'message': str(e)}, 400
@@ -261,4 +307,5 @@ api.add_resource(CreateStore, '/api/createStore')
 api.add_resource(GetStore, '/api/getStore/<string:store_id>')
 api.add_resource(EditStore, '/api/editStore/<string:store_id>')
 api.add_resource(CreateProduct, '/api/createProduct')
+api.add_resource(EditProduct, '/api/editProduct/<string:product_id>')
 api.add_resource(GetProduct, '/api/getProduct/<string:product_id>')
