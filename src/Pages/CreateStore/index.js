@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import "./index.scss";
-import NavBar from "../../components/NavBar";
-import CreateStoreForm from "../../components/CreateStoreForm";
-import AboveNavBar from "../../components/AboveNavBar";
-import BusinessPreview from "../../components/BusinessPreview";
+import React, {Component} from 'react'
+import './index.scss'
+import NavBar from '../../components/NavBar'
+import CreateStoreForm from '../../components/CreateStoreForm'
+import AboveNavBar from '../../components/AboveNavBar'
+import BusinessPreview from '../../components/BusinessPreview'
 
 export default class CreateStore extends Component {
   render() {
@@ -28,6 +28,6 @@ export default class CreateStore extends Component {
           </div>
         </div>
       </>
-    );
+    )
   }
 }

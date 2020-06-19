@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { FiHelpCircle } from "react-icons/fi";
-import { Redirect } from "react-router-dom";
-import "./index.scss";
-import "./overwrite.scss";
+import React, {Component} from 'react'
+import {FiHelpCircle} from 'react-icons/fi'
+import {Redirect} from 'react-router-dom'
+import './index.scss'
+import './overwrite.scss'
 
 export default class CreateStoreForm extends Component {
   constructor(props) {
@@ -10,26 +10,28 @@ export default class CreateStoreForm extends Component {
     this.state = {
       redirect: null,
       name: '',
-      category: ''
+      category: '',
     }
 
-    this.handleCreateStore = this.handleCreateStore.bind(this);
+    this.handleCreateStore = this.handleCreateStore.bind(this)
   }
 
   handleCreateStore() {
-    this.setState({ redirect: "/storeProfile" })
+    this.setState({redirect: '/storeProfile'})
     console.log('dfdf')
   }
 
   render() {
-
-    if(this.state.redirect) {
+    if (this.state.redirect) {
       return <Redirect to={this.state.redirect} />
     }
 
     return (
       <>
-        <form className="card create-store-form p-3" onSubmit={this.handleCreateStore}>
+        <form
+          className="card create-store-form p-3"
+          onSubmit={this.handleCreateStore}
+        >
           <div className="header-form pb-2 d-flex justify-content-between">
             <div>
               <p className="h3 font-weight-bold"> Crear tu tienda </p>
@@ -75,6 +77,6 @@ export default class CreateStoreForm extends Component {
           </div>
         </form>
       </>
-    );
+    )
   }
 }

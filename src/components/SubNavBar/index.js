@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { FcShop } from "react-icons/fc";
-import "./index.scss";
-import "./overwrite.scss";
+import React, {Component} from 'react'
+import {FcShop} from 'react-icons/fc'
+import './index.scss'
+import './overwrite.scss'
 
-import {FaFacebookF, FaTwitter, FaGoogle} from "react-icons/fa";
+import {FaFacebookF, FaTwitter, FaGoogle} from 'react-icons/fa'
 
 export default class SubNavBar extends Component {
   render() {
@@ -36,17 +36,32 @@ export default class SubNavBar extends Component {
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header d-flex flex-column align-items-center pb-0">
-                    <span className="py-2 lead font-weight-bold text-dark"> Registrar con </span>
-                    <span className="py-2 text-muted "> Registrate con tu cuenta de redes </span>
+                    <span className="py-2 lead font-weight-bold text-dark">
+                      {' '}
+                      Registrar con{' '}
+                    </span>
+                    <span className="py-2 text-muted ">
+                      {' '}
+                      Registrate con tu cuenta de redes{' '}
+                    </span>
 
                     <div className="d-flex justify-content-center">
-                      <a href="/404" className="icon-social-network-modal icon-facebook d-flex justify-content-center align-items-center mx-2">
+                      <a
+                        href="/404"
+                        className="icon-social-network-modal icon-facebook d-flex justify-content-center align-items-center mx-2"
+                      >
                         <FaFacebookF className="text-center" />
                       </a>
-                      <a href="/404" className="icon-social-network-modal icon-twitter d-flex justify-content-center align-items-center mx-2">
+                      <a
+                        href="/404"
+                        className="icon-social-network-modal icon-twitter d-flex justify-content-center align-items-center mx-2"
+                      >
                         <FaTwitter className="text-center" />
                       </a>
-                      <a href="/404" className="icon-social-network-modal icon-google d-flex justify-content-center align-items-center mx-2">
+                      <a
+                        href="/404"
+                        className="icon-social-network-modal icon-google d-flex justify-content-center align-items-center mx-2"
+                      >
                         <FaGoogle className="text-center" />
                       </a>
                     </div>
@@ -56,7 +71,6 @@ export default class SubNavBar extends Component {
                       <div className="circle"></div>
                       <div className="divider-modal"></div>
                     </div>
-
                   </div>
                   <div class="modal-body py-2">
                     <form method="post">
@@ -124,6 +138,6 @@ export default class SubNavBar extends Component {
           </div>
         </nav>
       </>
-    );
+    )
   }
 }
