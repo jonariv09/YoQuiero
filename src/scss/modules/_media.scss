@@ -1,0 +1,59 @@
+@import '~bootstrap/scss/variables';
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+// Adaptaciones para los diseños de celular
+@media (max-width: $phone-size) {
+  .col-sm-2 {
+    width: 50%;
+  }
+
+  .left-side-menu {
+    display: none;
+  }
+}
+
+// Adaptaciones para los diseños de tablet
+@media (max-width: ($tablet-size)) {
+  .left-side-menu {
+    width: 7rem;
+
+    .navbar-text {
+      display: none;
+    }
+
+    .nav-item {
+      .nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .nav-icon {
+          margin: 0 0 0.4em 0;
+          font-size: 23px;
+        }
+
+        .text-nav-item {
+          display: none;
+          text-align: center;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+// Mixins de media's
+@mixin apply-display-to-component($component) {
+  @media (max-width: $tablet-size) {
+    .#{$component}-products {
+      .row {
+        display: flex;
+        justify-content: start;
+      }
+    }
+  }
+}

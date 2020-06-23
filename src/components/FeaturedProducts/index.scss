@@ -1,8 +1,8 @@
 @import '../../scss/modules/variables';
-@import '../../scss/modules/media_products';
+@import '../../scss/modules/media';
 
 .featured-products {
-  font-family: OpenSans;
+  //font-family: OpenSans;
 }
 
 @include apply-display-to-component('featured');

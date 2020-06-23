@@ -39,7 +39,7 @@ export default class LeftSideMenu extends Component {
                 aria-disabled="true"
               >
                 <FiHome className="nav-icon" />
-                Tableros de ventas
+                <span className="text-nav-item"> Tableros de ventas </span>
               </a>
             </li>
 
@@ -51,7 +51,7 @@ export default class LeftSideMenu extends Component {
                 aria-disabled="true"
               >
                 <FiCalendar className="nav-icon" />
-                Calendario
+                <span className="text-nav-item"> Calendario </span>
               </a>
             </li>
 
@@ -63,7 +63,7 @@ export default class LeftSideMenu extends Component {
                 aria-disabled="true"
               >
                 <FiMessageSquare className="nav-icon" />
-                Mensajes
+                <span className="text-nav-item"> Mensajes </span>
               </a>
             </li>
 
@@ -75,7 +75,7 @@ export default class LeftSideMenu extends Component {
                 aria-disabled="true"
               >
                 <FiShoppingBag className="nav-icon" />
-                Comercio electrónico
+                <span className="text-nav-item"> Comercio electrónico </span>
               </a>
             </li>
 
@@ -87,7 +87,7 @@ export default class LeftSideMenu extends Component {
                 aria-disabled="true"
               >
                 <FiMail className="nav-icon" />
-                Correo electrónico
+                <span className="text-nav-item"> Correo electrónico </span>
               </a>
             </li>
 
@@ -99,7 +99,7 @@ export default class LeftSideMenu extends Component {
                 aria-disabled="true"
               >
                 <FiFileText className="nav-icon" />
-                Tareas
+                <span className="text-nav-item"> Tareas </span>
               </a>
             </li>
 
@@ -111,9 +111,24 @@ export default class LeftSideMenu extends Component {
                 aria-disabled="true"
               >
                 <FiImage className="nav-icon" />
-                Diseños
+                <span className="text-nav-item"> Diseños </span>
               </a>
             </li>
+
+            {/* Testeo del scroll para los diferentes diseños responsive */}
+            {/*{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 123, 123].map((value, index) => (*/}
+            {/*  <li className="nav-item">*/}
+            {/*    <a*/}
+            {/*      className="nav-link"*/}
+            {/*      href="/404"*/}
+            {/*      tabIndex="-1"*/}
+            {/*      aria-disabled="true"*/}
+            {/*    >*/}
+            {/*      <FiImage className="nav-icon" />*/}
+            {/*      <span className="text-nav-item"> Diseños </span>*/}
+            {/*    </a>*/}
+            {/*  </li>*/}
+            {/*))}*/}
           </div>
         </nav>
       </>

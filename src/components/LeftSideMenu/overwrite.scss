@@ -1,4 +1,5 @@
 @import '../../scss/modules/variables';
+@import '../../scss/modules/media';
 
 .navbar {
   height: 100vh;
@@ -9,18 +10,14 @@
   color: $color-primary-left-side-nav-bar;
 
   .nav-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
 
     .nav-link {
-      display: block;
       width: 100%;
       padding: 1rem 3rem;
       font-weight: bold;
       color: $color-primary-left-side-nav-bar;
-      transition: color 0.5s;
+      transition: color 0.3s;
 
       &:hover {
         color: $color-secondary-left-side-nav-bar;
