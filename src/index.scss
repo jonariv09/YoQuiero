@@ -1,6 +1,9 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 @import 'scss/modules/variables';
+@import 'scss/modules/fonts';
 
 @import 'scss/GeneralStyles.scss';
 @import 'scss/Overwrite.scss';
+
+@import 'scss/mixins/scroll';

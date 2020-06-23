@@ -1,6 +1,8 @@
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 
+$primary: #0a1555;
+
 $xs: 0 !default;
 $sm: 576px !default;
 $lg: 768px !default;
@@ -9,3 +11,8 @@ $xl: 1200px !default;
 
 $tablet-size: 1024px !default;
 $phone-size: $sm !default;
+
+$bg-left-side-bar: rgb(49, 58, 70) !default;
+$width-left-side-bar: 18rem !default;
+$color-primary-left-side-nav-bar: #8391a2 !default;
+$color-secondary-left-side-nav-bar: #cedce4 !default;

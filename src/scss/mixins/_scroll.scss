@@ -1,0 +1,15 @@
+@mixin modify-scrollbar($class) {
+  #{$class}::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  #{$class}::-webkit-scrollbar-track {
+    background-color: rgb(218, 216, 216);
+    border-radius: 5px;
+  }
+
+  #{$class}::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 5px;
+  }
+}

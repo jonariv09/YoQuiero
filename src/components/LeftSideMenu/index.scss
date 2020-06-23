@@ -1,0 +1,29 @@
+@import '../../scss/modules/variables';
+@import '../../scss/mixins/scroll';
+
+.left-side-menu {
+  width: $width-left-side-bar;
+  background: $bg-left-side-bar;
+
+  .navbar-header {
+    padding: 2em 0;
+    display: flex;
+    justify-content: center;
+    .logo-image {
+      width: 70%;
+    }
+  }
+
+  @include modify-scrollbar('.navbar-list-container');
+
+  .navbar-list-container {
+    width: 100%;
+    overflow-y: scroll;
+    height: 100%;
+
+    .nav-icon {
+      margin-top: -3px;
+      margin-right: 0.5em;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto'), url('../../assets/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto'), url('../../assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: normal;
+  src: local('Open Sans'), local('OpenSans'),
+    url('../../assets/fonts/OpenSans-Light.ttf'),
+    url('../../assets/fonts/opensans-light-webfont.woff'),
+    url('../../assets/fonts/opensans-light-webfont.woff2');
+}

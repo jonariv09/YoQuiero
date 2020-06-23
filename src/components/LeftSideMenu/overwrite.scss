@@ -1,0 +1,30 @@
+@import '../../scss/modules/variables';
+
+.navbar {
+  height: 100vh;
+  padding: 0;
+  font-size: 15px;
+  flex-wrap: nowrap;
+  font-family: 'Roboto Light';
+  color: $color-primary-left-side-nav-bar;
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .nav-link {
+      display: block;
+      width: 100%;
+      padding: 1rem 3rem;
+      font-weight: bold;
+      color: $color-primary-left-side-nav-bar;
+      transition: color 0.5s;
+
+      &:hover {
+        color: $color-secondary-left-side-nav-bar;
+      }
+    }
+  }
+}

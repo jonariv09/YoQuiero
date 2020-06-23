@@ -1,0 +1,18 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '../../scss/modules/variables';
+
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  #content-wrapper {
+    background: $gray-100;
+    width: 100%;
+    overflow-x: hidden;
+    #content {
+      flex: 1 0 auto;
+      padding: 2rem;
+      margin-left: $width-left-side-bar;
+    }
+  }
+}

@@ -5,12 +5,16 @@ const Home = lazy(() => import('./Pages/Home'))
 const CreateStore = lazy(() => import('./Pages/CreateStore'))
 const StoreProfile = lazy(() => import('./Pages/StoreProfile'))
 const NotFound = lazy(() => import('./Pages/NotFound'))
+const Inventory = lazy(() => import('./Pages/Inventory'))
 
 export default function AppRoutes() {
   return (
     <Suspense fallback={null}>
       <Router>
         <Switch>
+          <Route path="/inventory">
+            <Inventory />
+          </Route>
           <Route path="/storeProfile">
             <StoreProfile />
           </Route>
