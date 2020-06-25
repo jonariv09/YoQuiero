@@ -1,12 +1,20 @@
 @import '~bootstrap/scss/variables';
 
-.row {
-  display: flex;
-  justify-content: space-around;
-}
+//.row {
+//  display: flex;
+//  justify-content: space-around;
+//}
 
 // Adaptaciones para los diseños de celular
 @media (max-width: $phone-size) {
+  #wrapper {
+    #content-wrapper {
+      #content {
+        margin-left: $width-left-side-bar-phone;
+      }
+    }
+  }
+
   .col-sm-2 {
     width: 50%;
   }
@@ -17,9 +25,17 @@
 }
 
 // Adaptaciones para los diseños de tablet
-@media (max-width: ($tablet-size)) {
+@media (max-width: $tablet-size) and (min-width: $phone-size) {
+  #wrapper {
+    #content-wrapper {
+      #content {
+        margin-left: $width-left-side-bar-tablet;
+      }
+    }
+  }
+
   .left-side-menu {
-    width: 7rem;
+    width: $width-left-side-bar-tablet;
 
     .navbar-text {
       display: none;

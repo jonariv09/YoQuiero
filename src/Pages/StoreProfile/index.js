@@ -133,7 +133,7 @@ export default class StoreProfile extends Component {
                   </a>
                 </li>
                 <li className="nav-item active">
-                  <a className="nav-link" href="/404">
+                  <a className="nav-link" href="/inventory">
                     Ventas
                   </a>
                 </li>
