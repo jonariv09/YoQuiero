@@ -1,5 +1,6 @@
 from .app import db
 from sqlalchemy_serializer import SerializerMixin
+from sqlalchemy.sql import func
 
 
 class User(db.Model, SerializerMixin):
@@ -15,6 +16,9 @@ class User(db.Model, SerializerMixin):
 
     # A user can only have a Store
     store = db.relationship('Store', lazy=True, uselist=False, back_populates="user")
+
+    # A User can have many likes
+    likes = db.relationship('ProductLike', backref='like', lazy=True)
 
 
 class Store(db.Model, SerializerMixin):
@@ -60,3 +64,13 @@ class Comments(db.Model, SerializerMixin):
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
 
     text = db.Column(db.String, nullable=False)
+    created_at = db.Column(db.DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class ProductLike(db.Model, SerializerMixin):
+    id = db.Column(db.Integer, primary_key=True)
+
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+
+    liked_at = db.Column(db.DateTime(timezone=True), server_default=func.now(), nullable=False)
