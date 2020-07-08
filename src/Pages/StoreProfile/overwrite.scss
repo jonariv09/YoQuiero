@@ -1,5 +1,8 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
 .nav-link {
-  color: black; 
+  color: black;
 }
 
 .nav-link:hover {
@@ -13,8 +16,6 @@
 .card-header {
   padding: 0;
   position: relative;
+  border-left: $card-border-width solid $card-border-color;
+  border-right: $card-border-width solid $card-border-color;
 }
-
-// input[type="file"] {
-//   place
-// }
