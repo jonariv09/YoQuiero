@@ -3,7 +3,7 @@ from cloudinary import uploader
 from flask_restful import Resource
 from flask import request
 from .app import api, db, app
-from .models import User, Store, Product, Comments
+from .models import User, Store, Product, Comment, Like
 from .auth import *
 from dotenv import load_dotenv
 
@@ -141,7 +141,7 @@ class CreateProduct(Resource):
                                   price=product['price'],
                                   category=product['category'],
                                   date_added=datetime.now(),
-                                  likes=0,
+                                  likes_count=0,
                                   image=upload.get('url', 'null'),
                                   store=user.store,
                                   store_id=user.store.id)
@@ -264,6 +264,32 @@ class EditStore(Resource):
                     'message': str(e)}, 400
 
 
+class LikeProduct(Resource):
+    def get(self, product_id):
+        try:
+            user = check_user_session(request)
+
+            product = Product.query.get(product_id)
+            if product is None:
+                raise Exception("Product is missing")
+
+            like_product = Like(user_id=user.id,
+                                product_id=product.id)
+            product.likes_count += 1
+
+            db.session.add(like_product)
+            db.session.commit()
+
+            return {'status': 'ok',
+                    'message': 'The like has been created successfully'}, 201
+        except jwt.ExpiredSignatureError as e:
+            return {'status': 'fail',
+                    'message': str(e)}, 401
+        except Exception as e:
+            return {'status': 'fail',
+                    'message': str(e)}, 400
+
+
 def check_user_session(request_):
     auth_header = request_.headers.get('Authorization')
 
@@ -309,3 +335,4 @@ api.add_resource(EditStore, '/api/editStore/<string:store_id>')
 api.add_resource(CreateProduct, '/api/createProduct')
 api.add_resource(EditProduct, '/api/editProduct/<string:product_id>')
 api.add_resource(GetProduct, '/api/getProduct/<string:product_id>')
+api.add_resource(LikeProduct, '/api/likeProduct/<string:product_id>')
