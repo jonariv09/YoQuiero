@@ -12,13 +12,13 @@ class User(db.Model, SerializerMixin):
     password = db.Column(db.Text, nullable=False)
 
     # User can make many comments
-    comments = db.relationship('Comments', backref='user', lazy=True)
+    comments = db.relationship('Comment', back_populates='user', lazy=True)
 
     # A user can only have a Store
     store = db.relationship('Store', lazy=True, uselist=False, back_populates="user")
 
     # A User can have many likes
-    likes = db.relationship('ProductLike', backref='like', lazy=True)
+    likes = db.relationship('Like', back_populates="user", lazy=True)
 
 
 class Store(db.Model, SerializerMixin):
@@ -30,7 +30,7 @@ class Store(db.Model, SerializerMixin):
     profile_picture = db.Column(db.String, nullable=True)
     background_picture = db.Column(db.String, nullable=True)
 
-    # A store have a User
+    # A store can only have a User
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     user = db.relationship("User", back_populates="store")
 
@@ -47,30 +47,41 @@ class Product(db.Model, SerializerMixin):
 
     category = db.Column(db.String, nullable=False)
     date_added = db.Column(db.DateTime, nullable=False)
-    likes = db.Column(db.Integer, nullable=False)
+    likes_count = db.Column(db.Integer, nullable=False, default=0)
     image = db.Column(db.String, nullable=False)
 
     # A product can have many comments
-    comments = db.relationship('Comments', backref='product', lazy=True)
+    comments = db.relationship('Comment', back_populates='product', lazy=True)
+
+    # A Product can have many likes
+    likes = db.relationship('Like', back_populates='product', lazy=True)
 
     # A product belongs to a Store
     store_id = db.Column(db.Integer, db.ForeignKey('store.id'), nullable=False)
 
 
-class Comments(db.Model, SerializerMixin):
+class Comment(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
 
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user = db.relationship("User", lazy=True, back_populates="comments")
+
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+    product = db.relationship("Product", lazy=True, back_populates="comments")
 
     text = db.Column(db.String, nullable=False)
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now(), nullable=False)
 
 
-class ProductLike(db.Model, SerializerMixin):
+class Like(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
 
+    # A like can only have a User
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user = db.relationship("User", lazy=True, uselist=False, back_populates="likes")
+
+    # A like can only have a Product
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+    product = db.relationship("Product", lazy=True, uselist=False, back_populates="likes")
 
     liked_at = db.Column(db.DateTime(timezone=True), server_default=func.now(), nullable=False)
