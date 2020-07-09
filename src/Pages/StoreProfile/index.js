@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 
-import {FiCamera} from 'react-icons/fi'
+import {FiCamera, FiPhone, FiMail} from 'react-icons/fi'
 
 import AboveNavBar from '../../components/AboveNavBar'
 import NavBar from '../../components/NavBar'
 import ProductsSellerProfile from '../../components/ProductsSellerProfile'
+import BottomNavBar from '../../components/BottomNavBar'
 
 import './index.scss'
 import './overwrite.scss'
@@ -118,10 +119,10 @@ export default class StoreProfile extends Component {
                 </div>
               </div>
 
-              <nav className="navbar-business-preview navbar navbar-expand-lg p-0">
+              <nav className="navbar-business navbar navbar-expand-lg p-0">
                 <ul className="navbar-nav">
-                  <li className="nav-item active">
-                    <a className="nav-link" href="/404">
+                  <li className="nav-item">
+                    <a className="nav-link" href="">
                       Productos
                     </a>
                   </li>
@@ -199,10 +200,21 @@ export default class StoreProfile extends Component {
                   </li>
                 </ul>
               </nav>
+
+              <div className="float-services py-1">
+                <a href="/404">
+                  <FiPhone className="services-icon" />
+                </a>
+                <a href="/404">
+                  <FiMail className="services-icon" />
+                </a>
+              </div>
             </div>
           </div>
 
           <ProductsSellerProfile />
+
+          <BottomNavBar />
         </div>
         {/*  container */}
       </>

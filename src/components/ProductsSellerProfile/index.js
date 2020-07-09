@@ -32,14 +32,20 @@ export default class ProductsSellerProfile extends Component {
 
           <div className="col-xl-9">
             <div className="row products-container">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((index, value) => (
-                <div className="product">
-                  <a href="/404">
-                    <img src={image} className="rounded product-image" alt="" />
-                  </a>
-                  <span className="d-block pt-1"> C$ 00.00 </span>
-                </div>
-              ))}
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(
+                (index, value) => (
+                  <div className="product">
+                    <a href="/404">
+                      <img
+                        src={image}
+                        className="rounded product-image"
+                        alt=""
+                      />
+                    </a>
+                    <span className="d-block pt-1"> C$ 00.00 </span>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>

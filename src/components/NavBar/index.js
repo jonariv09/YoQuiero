@@ -103,7 +103,7 @@ export default class NavBar extends Component {
                     />
                     Carro
                   </a>
-                  <span className="badge badge-shopping-cart"> 2 </span>
+                  <span className="badge badge-shopping-cart"> 0 </span>
                 </div>
               </div>
             </div>
