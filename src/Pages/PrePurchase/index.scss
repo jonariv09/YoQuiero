@@ -1,0 +1,21 @@
+.big-image {
+  width: 90%;
+}
+
+.small-images {
+  display: flex;
+  justify-content: start;
+  .small-image {
+    width: 10rem;
+  }
+}
+
+.text-header {
+  border-bottom: 1px solid rgba(#000, 0.125);
+  padding-bottom: 1em;
+  margin-bottom: 3em;
+}
+
+.text-description {
+  font-size: 15px;
+}

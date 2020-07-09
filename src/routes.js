@@ -5,12 +5,16 @@ const Home = lazy(() => import('./Pages/Home'))
 const CreateStore = lazy(() => import('./Pages/CreateStore'))
 const StoreProfile = lazy(() => import('./Pages/StoreProfile'))
 const NotFound = lazy(() => import('./Pages/NotFound'))
+const PrePurchase = lazy(() => import('./Pages/PrePurchase'))
 
 export default function AppRoutes() {
   return (
     <Suspense fallback={null}>
       <Router>
         <Switch>
+          <Route path="/pre-purchase">
+            <PrePurchase />
+          </Route>
           <Route path="/storeProfile">
             <StoreProfile />
           </Route>
