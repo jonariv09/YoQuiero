@@ -6,6 +6,7 @@ import AboveNavBar from '../../components/AboveNavBar'
 import NavBar from '../../components/NavBar'
 import ProductsSellerProfile from '../../components/ProductsSellerProfile'
 import BottomNavBar from '../../components/BottomNavBar'
+import MessageBox from '../../components/MessageBox'
 
 import './index.scss'
 import './overwrite.scss'
@@ -47,7 +48,7 @@ export default class StoreProfile extends Component {
         <AboveNavBar />
         <NavBar />
 
-        <div className="container">
+        <div className="container position-relative">
           <div className="card-business-preview">
             <div className="card-header">
               {this.state.coverPicture ? (
@@ -200,7 +201,6 @@ export default class StoreProfile extends Component {
                   </li>
                 </ul>
               </nav>
-
               <div className="float-services py-1">
                 <a href="/404">
                   <FiPhone className="services-icon" />
@@ -211,7 +211,6 @@ export default class StoreProfile extends Component {
               </div>
             </div>
           </div>
-
           <ProductsSellerProfile />
 
           <BottomNavBar />

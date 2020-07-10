@@ -6,11 +6,13 @@
   bottom: 0;
   height: 3rem;
   background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(black, 0.125);
+  border-left: 1px solid rgba(black, 0.125);
+  border-top: 1px solid rgba(black, 0.125);
+  border-right: 1px solid rgba(black, 0.125);
 
   .search-input-navbar-bottom,
   .users-container,
-  .message-box {
+  .message-box-close {
     box-shadow: inset 2px 0 rgba(#000, 0.125);
   }
 
@@ -49,8 +51,9 @@
     }
   }
 
-  .message-box {
+  .message-box-close {
     background-color: white;
+    position: relative;
     display: flex;
     height: 100%;
     justify-content: space-around;

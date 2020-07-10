@@ -6,6 +6,7 @@ import './index.scss'
 import './overwrite.scss'
 
 import userImage from '../../assets/images/userImage.jpg'
+import MessageBox from '../MessageBox'
 
 const icons = {
   font: 22,
@@ -48,10 +49,11 @@ export default class BottomNavBar extends Component {
           </div>
 
           <div className="col-3 p-0">
-            <div className="message-box">
-              <div> Mensaje de texto </div>
-              <FiSend size={icons.font} className="icon-message-box" />
-            </div>
+            <MessageBox />
+            {/*<div className="message-box-close">*/}
+            {/*  <div> Mensaje de texto </div>*/}
+            {/*  <FiSend size={icons.font} className="icon-message-box" />*/}
+            {/*</div>*/}
           </div>
         </div>
       </>
