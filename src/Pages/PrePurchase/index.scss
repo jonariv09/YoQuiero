@@ -1,4 +1,4 @@
-$star-color: rgb(243, 211, 95);
+@import '../../scss/modules/variables';
 
 .pre-purchase {
   font-size: 15px;
@@ -34,14 +34,6 @@ $star-color: rgb(243, 211, 95);
 .btn-add-car {
   color: white;
   margin: 0 1rem;
-}
-
-.btn-buy {
-  background-color: rgb(255, 120, 1);
-}
-
-.btn-add-car {
-  background-color: rgb(8, 100, 170);
 }
 
 .quantity-number {

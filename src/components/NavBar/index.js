@@ -22,7 +22,9 @@ export default class NavBar extends Component {
         <nav className="navbar navbar-expand-lg main-navbar flex-row">
           <div className="row py-1">
             <div className="col-xl-3 d-flex align-items-center">
-              <img src={Logo} className="img-logo" alt="" />
+              <a href="/">
+                <img src={Logo} className="img-logo" alt="" />
+              </a>
 
               <div className="dropdown ml-4">
                 <img
@@ -96,14 +98,14 @@ export default class NavBar extends Component {
                 <div className="mr-auto divider"></div>
 
                 <div className="item position-relative">
-                  <a href="/404" className="icon-link-navbar">
+                  <a href="/shopping-car" className="icon-link-navbar">
                     <AiOutlineShoppingCart
                       size={styles.iconSize}
                       className="icon-item mr-2"
                     />
                     Carro
                   </a>
-                  <span className="badge badge-shopping-cart"> 0 </span>
+                  <span className="badge badge-shopping-cart"> 3 </span>
                 </div>
               </div>
             </div>

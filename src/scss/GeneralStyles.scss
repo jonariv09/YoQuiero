@@ -1,3 +1,5 @@
+@import './modules/variables';
+
 @font-face {
   font-family: OpenSans;
   font-style: normal;
@@ -25,5 +27,23 @@
 
 .nav-bar-link:hover {
   text-decoration: none;
+  color: white;
+}
+
+.btn-add-car,
+.btn-buy {
+  color: white;
+}
+
+.btn-buy {
+  background-color: $main-color;
+}
+
+.btn-add-car {
+  background-color: $seconday-color;
+}
+
+.btn-buy:hover,
+.btn-add-car:hover {
   color: white;
 }
