@@ -1,3 +1,10 @@
+$star-color: rgb(243, 211, 95);
+
+.pre-purchase {
+  font-size: 15px;
+  padding: 0 5rem;
+}
+
 .big-image {
   width: 90%;
 }
@@ -16,6 +23,29 @@
   margin-bottom: 3em;
 }
 
-.text-description {
-  font-size: 15px;
+.ranking-container {
+  .ranking-star {
+    color: $star-color;
+    margin: 0 0.125rem;
+  }
+}
+
+.btn-buy,
+.btn-add-car {
+  color: white;
+  margin: 0 1rem;
+}
+
+.btn-buy {
+  background-color: rgb(255, 120, 1);
+}
+
+.btn-add-car {
+  background-color: rgb(8, 100, 170);
+}
+
+.quantity-number {
+  background-color: rgba(#000, 0.125);
+  padding: 0.5rem;
+  border-radius: 5px;
 }
