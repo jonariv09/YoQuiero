@@ -1,3 +1,5 @@
+@import '../../scss/modules/variables';
+
 @font-face {
   font-family: Roboto;
   font-style: normal;
@@ -53,6 +55,7 @@
   border-radius: 10px;
   background: white;
   position: relative;
+  margin-bottom: 1rem;
 
   .banner-bussines {
     @include banner-bussines-styles;
@@ -97,7 +100,7 @@
     }
   }
 
-  .navbar-business-preview {
+  .navbar-business {
     font-size: 14px;
     justify-content: flex-end;
 
@@ -107,56 +110,45 @@
       margin: 0 0.1em;
 
       .icon-link-shadow {
-        padding: 0.2em 0.4em;
-        border-radius: 45%;
-        background-color: rgb(196, 196, 196);
+        display: inline-block;
+        padding: 0.3em 0.5em;
+        border-radius: 35px;
+        color: white;
+        background-color: $main-color;
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
       }
     }
   }
-}
 
-.description-section {
-  border-radius: 10px;
-  background: rgb(242, 242, 242);
-
-  .skeleton-description-line {
-    height: 0.7em;
-    width: 60%;
-    background-color: rgb(195, 195, 195);
-    margin: 0.7em 0;
-    border-radius: 10px;
-  }
-}
-
-.main-section {
-  font-size: 15px;
-}
-
-.announcement-section {
-  border-radius: 10px;
-  background-color: rgb(196, 196, 196);
-
-  .announcement-input {
-    padding: 0;
-    border: none;
-    width: 70%;
-    height: 2em;
-    border-radius: 10px;
-  }
-
-  .horizontal-divider {
-    height: 1px;
-    background: white;
-    width: 100%;
-    border-radius: 10px;
-  }
-
-  .icons-container {
+  .float-services {
+    z-index: -1;
     display: flex;
-    color: black;
+    justify-content: space-around;
+    align-items: center;
+    width: 5rem;
+    position: absolute;
+    right: 5rem;
+    background-color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.125);
 
-    .icon-announcement {
-      color: white;
+    .services-icon {
+      color: $main-color;
     }
+  }
+}
+
+.add-product-card {
+  width: 9em;
+
+  .add-product-button {
+    color: white;
+    display: block;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
   }
 }

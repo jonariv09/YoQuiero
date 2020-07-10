@@ -1,3 +1,5 @@
+@import '../../scss/modules/variables';
+
 .main-navbar {
   font-size: 13px;
   font-family: OpenSans;
@@ -21,7 +23,7 @@
 
 .search-text-group {
   border: none;
-  background: rgb(255, 120, 1);
+  background: $main-color;
 }
 
 .form-control-main-search {
@@ -53,7 +55,7 @@
 }
 
 .badge-shopping-cart {
-  background-color: rgb(255, 120, 1);
+  background-color: $main-color;
   color: white;
   position: absolute;
   top: -40%;
@@ -62,7 +64,7 @@
 
 .sub-nav-bar {
   font-weight: bold;
-  background-color: rgb(255, 120, 1);
+  background-color: $main-color;
   margin: 0 -16px;
 }
 
