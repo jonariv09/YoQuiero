@@ -1,0 +1,68 @@
+@import '../../scss/modules/variables';
+
+.shopping-car {
+  font-size: 17px;
+}
+
+.card-product-car {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(#000, 0.125);
+  padding: 1rem;
+}
+
+.card-product-car-image {
+  width: 7rem;
+}
+
+.description-section-product-car {
+  .price-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .shipping-container {
+    font-size: 13px;
+    .shipping {
+      color: $seconday-color;
+    }
+  }
+
+  .discount-text {
+    font-size: 12px;
+
+    .discount-text-price {
+      color: rgba(#000, 0.5);
+      text-decoration: line-through;
+    }
+  }
+}
+
+.discount-text-number,
+.price-shipping {
+  border-radius: 5px;
+  padding: 0.15rem;
+  background-color: rgba($seconday-color, 0.125);
+}
+.card-icons-container {
+  .icon-card {
+    color: $seconday-color;
+  }
+}
+
+.summary-container {
+  border: 1px solid rgba(#000, 0.125);
+  padding: 1rem;
+  font-size: 17px;
+  border-radius: 10px;
+
+  .summary-result {
+    border-top: 1px solid rgba(#000, 0.125);
+    font-weight: bold;
+
+    &-number {
+      font-size: 20px;
+    }
+  }
+}

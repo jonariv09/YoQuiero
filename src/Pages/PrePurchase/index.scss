@@ -1,0 +1,43 @@
+@import '../../scss/modules/variables';
+
+.pre-purchase {
+  font-size: 15px;
+  padding: 0 5rem;
+}
+
+.big-image {
+  width: 90%;
+}
+
+.small-images {
+  display: flex;
+  justify-content: start;
+  .small-image {
+    width: 10rem;
+  }
+}
+
+.text-header {
+  border-bottom: 1px solid rgba(#000, 0.125);
+  padding-bottom: 1em;
+  margin-bottom: 3em;
+}
+
+.ranking-container {
+  .ranking-star {
+    color: $star-color;
+    margin: 0 0.125rem;
+  }
+}
+
+.btn-buy,
+.btn-add-car {
+  color: white;
+  margin: 0 1rem;
+}
+
+.quantity-number {
+  background-color: rgba(#000, 0.125);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
