@@ -62,5 +62,9 @@
     .icon-message-box {
       color: $main-color;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

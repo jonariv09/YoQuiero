@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ReactCSSTransitionGroup from 'react-transition-group'
 
 import {
   FiPhone,
@@ -19,47 +20,67 @@ const icons = {
 }
 
 export default class MessageBox extends Component {
+  constructor(props) {
+    super(props)
+    this.handleToogle = this.handleToogle.bind(this)
+  }
+
+  handleToogle() {
+    this.props.onToggleMessageBox()
+  }
+
   render() {
     return (
       <>
-        <div className="card message-box-open">
-          <div className="card-header header-message-box">
-            <a href="/404">
-              <img src={userImage} alt="" className="image-box" />
-            </a>
+        {this.props.toggleMessageBox ? (
+          <div className="card message-box-open">
+            <div
+              className="card-header header-message-box"
+              onClick={this.handleToogle}
+            >
+              <a href="/404">
+                <img src={userImage} alt="" className="image-box" />
+              </a>
 
-            <div className="container-icons-message-box">
-              <a href="/404" className="icon-message-box">
-                <FiPhone />
-              </a>
-              <a href="/404" className="icon-message-box">
-                <FiMinus />
-              </a>
-              <a href="/404" className="icon-message-box">
-                <FiX />
-              </a>
+              <div className="container-icons-header">
+                <a href="/404">
+                  <FiPhone size={icons.size} className="icon-header" />
+                </a>
+                <a href="">
+                  <FiMinus
+                    size={icons.size}
+                    className="icon-header"
+                    onClick={this.handleToogle}
+                  />
+                </a>
+                <a href="/404">
+                  <FiX size={icons.size} className="icon-header" />
+                </a>
+              </div>
+            </div>
+
+            <div className="card-body"></div>
+
+            <div className="card-footer footer-message-box">
+              <div className="container-icons-footer">
+                <a href="/404" className="">
+                  <FiImage size={icons.size} className="icon-footer" />
+                </a>
+                <a href="/404" className="">
+                  <FiSettings size={icons.size} className="icon-footer" />
+                </a>
+              </div>
+              <input type="text" className="text-input-footer" />
+              <div>
+                <a href="/404" className="">
+                  <FiSend size={icons.size} className="icon-footer" />
+                </a>
+              </div>
             </div>
           </div>
-
-          <div className="card-body"></div>
-
-          <div className="card-footer footer-message-box p-2">
-            <div className="container-icons-footer">
-              <a href="" className="">
-                <FiImage size={icons.size} className="icon-footer" />
-              </a>
-              <a href="" className="">
-                <FiSettings size={icons.size} className="icon-footer" />
-              </a>
-            </div>
-            <input type="text" className="text-input-footer" />
-            <div>
-              <a href="" className="">
-                <FiSend size={icons.size} className="icon-footer" />
-              </a>
-            </div>
-          </div>
-        </div>
+        ) : (
+          <> </>
+        )}
       </>
     )
   }

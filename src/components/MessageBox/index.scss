@@ -6,21 +6,30 @@
   border-radius: 50%;
 }
 
+.icon-header,
+.icon-footer {
+  color: $main-color;
+}
+
 .message-box-open {
   position: absolute;
-
   top: -17rem;
   height: 20rem;
   right: -2px;
   width: 100%;
+  z-index: 2;
 
   .header-message-box {
     display: flex;
     align-items: center;
     padding: 0.38em;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
-  .icon-message-box {
+  .icon-header {
     padding: 0 0.125rem;
   }
 
@@ -28,10 +37,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.7rem 0.5rem;
 
     .icon-footer {
       padding: 0.125rem;
-      color: $main-color;
     }
 
     .text-input-footer {

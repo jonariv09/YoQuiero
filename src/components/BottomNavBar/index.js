@@ -15,7 +15,13 @@ const icons = {
 export default class BottomNavBar extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {toggleMessageBox: false}
+
+    this.handleToggleMessageBox = this.handleToggleMessageBox.bind(this)
+  }
+
+  handleToggleMessageBox() {
+    this.setState({toggleMessageBox: !this.state.toggleMessageBox})
   }
 
   render() {
@@ -49,11 +55,17 @@ export default class BottomNavBar extends Component {
           </div>
 
           <div className="col-3 p-0">
-            <MessageBox />
-            {/*<div className="message-box-close">*/}
-            {/*  <div> Mensaje de texto </div>*/}
-            {/*  <FiSend size={icons.font} className="icon-message-box" />*/}
-            {/*</div>*/}
+            <MessageBox
+              toggleMessageBox={this.state.toggleMessageBox}
+              onToggleMessageBox={this.handleToggleMessageBox}
+            />
+            <div
+              className="message-box-close"
+              onClick={this.handleToggleMessageBox}
+            >
+              <div> Mensaje de texto </div>
+              <FiSend size={icons.font} className="icon-message-box" />
+            </div>
           </div>
         </div>
       </>
