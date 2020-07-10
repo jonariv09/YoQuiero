@@ -1,0 +1,54 @@
+@import '../../scss/modules/variables';
+
+.image-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.icon-header,
+.icon-footer {
+  color: $main-color;
+}
+
+.message-box-open {
+  position: absolute;
+  top: -17rem;
+  height: 20rem;
+  right: -2px;
+  width: 100%;
+  z-index: 2;
+
+  .header-message-box {
+    display: flex;
+    align-items: center;
+    padding: 0.38em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .icon-header {
+    padding: 0 0.125rem;
+  }
+
+  .footer-message-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0.5rem;
+
+    .icon-footer {
+      padding: 0.125rem;
+    }
+
+    .text-input-footer {
+      border: 1px solid rgba(#000, 0.125rem);
+      border-radius: 35px;
+      outline: none;
+      padding: 0 0.3rem;
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+$product-size: 10rem;
+
+.main-section {
+  font-size: 15px;
+
+  .products-container {
+    justify-content: start;
+    .product {
+      padding: 1em;
+      .product-image {
+        width: $product-size;
+        height: $product-size;
+      }
+    }
+  }
+}
