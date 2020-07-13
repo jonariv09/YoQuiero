@@ -15,7 +15,7 @@ You will also see any lint errors in the console.
 ### `yarn start api`
 
 To start the development server of flask<br />
-Available at [http://localhost:5000](http://localhost:5000) 
+Available at [http://localhost:5000](http://localhost:5000)
 
 ### `yarn test`
 
