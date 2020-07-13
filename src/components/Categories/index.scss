@@ -1,7 +1,8 @@
-
 .categories {
   font-family: 'OpenSans';
   font-size: 13px;
+  background: white;
+  border-radius: 4px;
 }
 
 .categories li {
@@ -12,12 +13,12 @@
 .categories > .item-categories > .link-categories {
   display: block;
   width: 100%;
-  padding: .3rem 0;
+  padding: 0.3rem 0;
   color: black;
 }
 
 .categories > .item-categories > .link-categories:hover {
   color: rgb(227, 45, 4);
   box-shadow: inset 1px 1px 0 rgb(206, 206, 206),
-              inset 1px -1px 0 rgb(206, 206, 206);
+    inset 1px -1px 0 rgb(206, 206, 206);
 }

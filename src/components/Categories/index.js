@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import {FiChevronRight} from 'react-icons/fi'
 import './index.scss'
 
+import {FiChevronRight} from 'react-icons/fi'
 const icons = {
   fontSize: 14,
 }
 
-export default class Categories extends Component {
+export default class Categorias extends Component {
   render() {
     return (
       <>
@@ -23,8 +23,7 @@ export default class Categories extends Component {
             {' '}
             <a className="link-categories" href="/404">
               {' '}
-              <FiChevronRight size={icons.fontSize} /> Teléfonos celulares y
-              accesorios{' '}
+              <FiChevronRight size={icons.fontSize} /> Teléfonos celulares{' '}
             </a>{' '}
           </li>
           <li className="item-categories">
@@ -54,22 +53,23 @@ export default class Categories extends Component {
             {' '}
             <a className="link-categories" href="/404">
               {' '}
-              <FiChevronRight size={icons.fontSize} /> Salud y cuidado personal{' '}
+              <FiChevronRight size={icons.fontSize} /> Comida rapida platillos y
+              más{' '}
             </a>{' '}
           </li>
           <li className="item-categories">
             {' '}
             <a className="link-categories" href="/404">
               {' '}
-              <FiChevronRight size={icons.fontSize} /> Mejoras para el hogar y
-              herramientas{' '}
+              <FiChevronRight size={icons.fontSize} /> Zapatos, Ropa hombre y
+              mujer{' '}
             </a>{' '}
           </li>
           <li className="item-categories">
             {' '}
             <a className="link-categories" href="/404">
               {' '}
-              <FiChevronRight size={icons.fontSize} /> Hogar & Jardín{' '}
+              <FiChevronRight size={icons.fontSize} /> Limpieza de interiores{' '}
             </a>{' '}
           </li>
           <li className="item-categories">
@@ -113,7 +113,14 @@ export default class Categories extends Component {
             {' '}
             <a className="link-categories" href="/404">
               {' '}
-              <FiChevronRight size={icons.fontSize} /> Promoción Gearbest{' '}
+              <FiChevronRight size={icons.fontSize} /> Articulos de ferreteria{' '}
+            </a>{' '}
+          </li>
+          <li className="item-categories">
+            {' '}
+            <a className="link-categories" href="/404">
+              {' '}
+              <FiChevronRight size={icons.fontSize} /> Mascotas{' '}
             </a>{' '}
           </li>
         </div>

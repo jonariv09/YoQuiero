@@ -1,82 +1,161 @@
 import React, {Component} from 'react'
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaWhatsappSquare,
-  FaTwitterSquare,
-} from 'react-icons/fa'
 import './index.scss'
+import {AiFillFacebook} from 'react-icons/ai'
+import {AiFillTwitterSquare} from 'react-icons/ai'
+import {AiFillInstagram} from 'react-icons/ai'
+import Logo from '../../assets/images/logo.png'
+import {FaPaperPlane} from 'react-icons/fa'
 
-let iconStyles = {
-  fontSize: 20,
+const styles = {
+  iconSize: 30,
 }
 
 export default class Footer extends Component {
   render() {
     return (
       <>
-        <div className="footer w-100 p-4">
-          <div className="row">
-            <div className="col-6">
-              <span className="d-block lead"> Nosotros </span>
-              <ul className="list-footer">
-                <li className="item-footer">
-                  {' '}
-                  <a className="link-footer" href="#">
-                    {' '}
-                    Negocios{' '}
-                  </a>{' '}
-                </li>
-                <li className="item-footer">
-                  {' '}
-                  <a className="link-footer" href="#">
-                    {' '}
-                    Blog{' '}
-                  </a>{' '}
-                </li>
-                <li className="item-footer">
-                  {' '}
-                  <a className="link-footer" href="#">
-                    {' '}
-                    Sobre YoQuiero{' '}
-                  </a>{' '}
-                </li>
-                <li className="item-footer">
-                  {' '}
-                  <a className="link-footer" href="#">
-                    {' '}
-                    Relaciones con nuevos clientes{' '}
-                  </a>{' '}
-                </li>
-              </ul>
+        <footer className="page-footer font-small blue pt-4 color color-letra">
+          <div className="container-fluid text-md-left">
+            <div className="row">
+              <div className="col-md-4 mb-md-0 mb-4">
+                <h5 class="text-uppercase">
+                  ¿Quieres saber mas sobre nosotros?
+                </h5>
+                <ul class="list-unstyled text-left espacio">
+                  <li>
+                    <a href="#" className="link">
+                      Vende en YoQuiero
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="link">
+                      Relaciones con nuestros clientes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="link">
+                      Nuestro Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="link">
+                      ¿Que beneficios ofrecemos?
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <hr className="clearfix w-100 d-md-none pb-3"></hr>
+              <div className="col-md-4 mb-md-0 mb-4 ">
+                <h5 class="text-uppercase">Aumenta tus ventas en YoQuiero</h5>
+                <ul class="list-unstyled espacio">
+                  <li>
+                    <a href="#!" className="link">
+                      Publica lo que vendes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" className="link">
+                      Crea tu propia publicidad
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" className="link">
+                      Conectate con tus clientes potenciales
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" className="link">
+                      Tu negocio en todos lados
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-4 mb-md-0 mb-3 ">
+                <h5 class="text-uppercase">Soporte técnico</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!" className="link">
+                      ¿Necesitas ayuda con tu cuenta?
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" className="link">
+                      Informacion sobre tu cuenta
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" className="link">
+                      Envio de prod2uctos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" className="link">
+                      ayuda
+                    </a>
+                  </li>
+                  <li>
+                    <br></br>
+                    <span className="texto-color">
+                      Siguenos en nuestras redes sociales:
+                    </span>
+                    <a href="#">
+                      <AiFillFacebook
+                        className="link-icon"
+                        size={styles.iconSize}
+                      />
+                    </a>
+                    <a href="#">
+                      <AiFillTwitterSquare
+                        className="link-icon"
+                        size={styles.iconSize}
+                      />
+                    </a>
+                    <a href="#">
+                      <AiFillInstagram
+                        className="link-icon"
+                        size={styles.iconSize}
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-
-            <div className="col-6 d-flex justify-content-center align-items-center">
-              <ul className="social-list d-flex justify-content-center">
-                <a className="link-social" href="#">
-                  {' '}
-                  <FaFacebookSquare size={iconStyles.fontSize} />{' '}
-                </a>
-                <a className="link-social" href="#">
-                  {' '}
-                  <FaInstagramSquare size={iconStyles.fontSize} />{' '}
-                </a>
-                <a className="link-social" href="#">
-                  {' '}
-                  <FaWhatsappSquare size={iconStyles.fontSize} />{' '}
-                </a>
-                <a className="link-social" href="#">
-                  {' '}
-                  <FaTwitterSquare size={iconStyles.fontSize} />{' '}
-                </a>
-              </ul>
-            </div>
-
-            <div className="col-6"></div>
-
-            <div className="col-6"></div>
           </div>
-        </div>
+          <div className="footer-copyright text-center py-3 final-color footerbajo">
+            <div className="row ancho">
+              <div className="col-2">
+                <img src={Logo} className="dimen" />
+              </div>
+              <div className="col-2">
+                <a href="" className="link">
+                  Informacion de YoQuiero
+                </a>
+              </div>
+              <div className="col-2">
+                <a href="" className="link">
+                  Privacidad
+                </a>
+              </div>
+              <div className="col-2">
+                <a href="" className="link">
+                  Condiciones de uso
+                </a>
+              </div>
+              <div className="col-4">
+                <a>
+                  Envianos un correo{' '}
+                  <span>
+                    <button type="button" className="btn btn-primary  btn-sm">
+                      <FaPaperPlane className="tam-icon" />
+                      Enviar
+                    </button>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
       </>
     )
   }

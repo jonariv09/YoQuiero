@@ -1,0 +1,19 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.above-navbar {
+  font-family: OpenSans;
+  background-color: rgb(54, 134, 255);
+  font-size: 12px;
+  padding: 0 25px;
+  box-shadow: 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.above-nav-bar-link {
+  padding: 0;
+}
+
+.above-nav-bar-link:hover {
+  color: $gray-200;
+}
