@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       # Setup and configure gcloud CLI
-      - uses: jonariv09/github-actions/tree/master/setup-gcloud@master
+      - uses: jonariv09/github-actions/setup-gcloud@master
         with:
           version: '290.0.1'
           project_id: ${{ secrets.PROJECT_ID }}
