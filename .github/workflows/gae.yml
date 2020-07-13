@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+env:
+  PROJECT_ID: ${{ secrets.PROJECT_ID }}
+  SERVICE_NAME: yoquiero03
+
 jobs:
   setup-build-deploy:
     name: Deploy
@@ -16,10 +20,16 @@ jobs:
 
       # Setup and configure gcloud CLI
       - uses: jonariv09/github-actions/setup-gcloud@master
-        with: 
+        with:
           version: '290.0.1'
           project_id: ${{ secrets.PROJECT_ID }}
           service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+
+      - name: Build
+        run: |-
+          gcloud builds submit \
+            --quiet \
+            --tag "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
 
       # Deploy App to App Engine
       - name: Deploy
