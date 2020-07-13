@@ -1,89 +1,185 @@
-import React, { Component } from "react";
-import "./index.css";
+import React, {Component} from 'react'
+import './index.scss'
+
+import Logo from '../../assets/images/logo.png'
+import SpanishImage from '../../assets/images/spanish_language.png'
+import EnglishImage from '../../assets/images/english_language.png'
+import {FiUser} from 'react-icons/fi'
+import {
+  AiOutlineQuestionCircle,
+  AiOutlineShoppingCart,
+  AiOutlineSearch,
+} from 'react-icons/ai'
+
+const styles = {
+  iconSize: 21,
+}
 
 export default class NavBar extends Component {
   render() {
     return (
       <>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <nav className="navbar navbar-expand-lg main-navbar flex-row">
+          <div className="row py-1">
+            <div className="col-xl-3 d-flex align-items-center">
+              <img src={Logo} className="img-logo" alt="" />
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">
-                  Home <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
+              <div className="dropdown ml-4">
+                <img
+                  src={SpanishImage}
+                  alt="..."
+                  className="rounded-circle language-icon mr-5 dropdown-toggle language-dropdown"
                   href="#"
-                  id="navbarDropdown"
-                  role="button"
+                  id="dropdownMenuButton"
                   data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                />
+
+                <div
+                  className="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton"
                 >
-                  Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">
-                    Action
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Another action
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">
-                    Something else here
+                  <a
+                    className="dropdown-item d-flex align-items-center"
+                    href="/404"
+                  >
+                    <img
+                      src={EnglishImage}
+                      alt="..."
+                      className="rounded-circle language-icon mr-2"
+                    />
+                    English
                   </a>
                 </div>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="https://www.facebook.com"
-                  tabindex="-1"
-                  aria-disabled="true"
-                >
-                  Disabled
+              </div>
+            </div>
+
+            <div className="col-xl-4 ml-auto d-flex align-items-center">
+              <div className="input-group input-group-sm">
+                <input
+                  type="text"
+                  className="form-control form-control-main-search"
+                  aria-label="Sizing example input"
+                  placeholder="Buscar"
+                />
+                <div className="input-group-append search-group-append">
+                  <a
+                    href="/404"
+                    className="input-group-text search-text-group"
+                    id="inputGroup-sizing-sm"
+                  >
+                    <AiOutlineSearch
+                      className="icon-main-search"
+                      size={styles.iconSize}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-xl-4 ml-auto d-flex align-items-center">
+              <div className="ml-auto d-flex justify-content-center">
+                <a href="/404" className="item icon-link-navbar">
+                  <FiUser size={styles.iconSize} className="icon-item mr-2" />
+                  Perfil
                 </a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input
-                class="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button
-                class="btn btn-outline-success my-2 my-sm-0"
-                type="submit"
+                <div className="mr-auto divider"> </div>
+
+                <a href="/404" className="item icon-link-navbar">
+                  <AiOutlineQuestionCircle
+                    size={styles.iconSize}
+                    className="icon-item mr-2"
+                  />
+                  Ayuda
+                </a>
+                <div className="mr-auto divider"></div>
+
+                <div className="item position-relative">
+                  <a href="/404" className="icon-link-navbar">
+                    <AiOutlineShoppingCart
+                      size={styles.iconSize}
+                      className="icon-item mr-2"
+                    />
+                    Carro
+                  </a>
+                  <span className="badge badge-shopping-cart"> 2 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="sub-nav-bar d-flex justify-content-center">
+            <div className="d-flex justify-content-center align-items-center dropdown">
+              <a
+                href="/404"
+                className="nav-bar-link dropdown-toggle"
+                id="navbarDropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
-                Search
-              </button>
-            </form>
+                Categorías
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="/404">
+                  Action
+                </a>
+                <a className="dropdown-item" href="/404">
+                  Another action
+                </a>
+                <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/404">
+                  Something else here
+                </a>
+              </div>
+              <div className="divider divider-sub-navbar"> </div>
+            </div>
+
+            <div className="item-nav-bar">
+              <a href="/404" className="nav-bar-link">
+                Novedades
+              </a>
+              <div className="divider divider-sub-navbar"> </div>
+            </div>
+            <div className="item-nav-bar">
+              <a href="/404" className="nav-bar-link">
+                Nuevos productos
+              </a>
+              <div className="divider divider-sub-navbar"> </div>
+            </div>
+            <div className="item-nav-bar">
+              <a href="/404" className="nav-bar-link">
+                Comida
+              </a>
+              <div className="divider divider-sub-navbar"> </div>
+            </div>
+            <div className="item-nav-bar">
+              <a href="/404" className="nav-bar-link">
+                Ropa
+              </a>
+              <div className="divider divider-sub-navbar"> </div>
+            </div>
+            <div className="item-nav-bar">
+              <a href="/404" className="nav-bar-link">
+                Envíos
+              </a>
+              <div className="divider divider-sub-navbar"> </div>
+            </div>
+            <div className="item-nav-bar">
+              <a href="/404" className="nav-bar-link">
+                Servicios
+              </a>
+              <div className="divider divider-sub-navbar"> </div>
+            </div>
+            <div className="item-nav-bar">
+              <a href="/404" className="nav-bar-link">
+                Lo más vendido
+              </a>
+            </div>
           </div>
         </nav>
       </>
-    );
+    )
   }
 }

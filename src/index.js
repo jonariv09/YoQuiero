@@ -1,15 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.js";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import * as serviceWorker from './serviceWorker'
+import 'bootstrap/dist/js/bootstrap.bundle.js'
+import './index.scss'
+import App from './components/App'
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root")
-);
+  document.getElementById('root')
+)
 
-serviceWorker.unregister();
+serviceWorker.unregister()
