@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './index.css'
+import './index.scss'
 import camisa from '../../assets/images/img/camisa.png'
 import parlante from '../../assets/images/img/parlante.png'
 import computadora from '../../assets/images/img/computadora.png'

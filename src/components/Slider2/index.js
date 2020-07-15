@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './index.css'
+import './index.scss'
 import img1 from '../../assets/images/img/1.png'
 import img2 from '../../assets/images/img/2.png'
 import img3 from '../../assets/images/img/3.png'

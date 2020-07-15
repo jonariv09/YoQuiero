@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './index.css'
+import './index.scss'
 import ropa from '../../assets/images/img/ropa.png'
 import verdureria from '../../assets/images/img/verdureria.png'
 import zapateria from '../../assets/images/img/zapateria.png'
