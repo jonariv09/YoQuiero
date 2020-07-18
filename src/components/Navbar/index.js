@@ -15,7 +15,7 @@ const styles = {
   iconSize: 21,
 }
 
-export default class NavBar extends Component {
+export default class Navbar extends Component {
   render() {
     return (
       <>
@@ -108,76 +108,6 @@ export default class NavBar extends Component {
                   <span className="badge badge-shopping-cart"> 3 </span>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="sub-nav-bar d-flex justify-content-center">
-            <div className="d-flex justify-content-center align-items-center dropdown">
-              <a
-                href="/404"
-                className="nav-bar-link dropdown-toggle"
-                id="navbarDropdown"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Categorías
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="/404">
-                  Action
-                </a>
-                <a className="dropdown-item" href="/404">
-                  Another action
-                </a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="/404">
-                  Something else here
-                </a>
-              </div>
-              <div className="divider divider-sub-navbar"> </div>
-            </div>
-
-            <div className="item-nav-bar">
-              <a href="/404" className="nav-bar-link">
-                Novedades
-              </a>
-              <div className="divider divider-sub-navbar"> </div>
-            </div>
-            <div className="item-nav-bar">
-              <a href="/404" className="nav-bar-link">
-                Nuevos productos
-              </a>
-              <div className="divider divider-sub-navbar"> </div>
-            </div>
-            <div className="item-nav-bar">
-              <a href="/404" className="nav-bar-link">
-                Comida
-              </a>
-              <div className="divider divider-sub-navbar"> </div>
-            </div>
-            <div className="item-nav-bar">
-              <a href="/404" className="nav-bar-link">
-                Ropa
-              </a>
-              <div className="divider divider-sub-navbar"> </div>
-            </div>
-            <div className="item-nav-bar">
-              <a href="/404" className="nav-bar-link">
-                Envíos
-              </a>
-              <div className="divider divider-sub-navbar"> </div>
-            </div>
-            <div className="item-nav-bar">
-              <a href="/404" className="nav-bar-link">
-                Servicios
-              </a>
-              <div className="divider divider-sub-navbar"> </div>
-            </div>
-            <div className="item-nav-bar">
-              <a href="/404" className="nav-bar-link">
-                Lo más vendido
-              </a>
             </div>
           </div>
         </nav>

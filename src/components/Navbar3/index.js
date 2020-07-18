@@ -14,7 +14,7 @@ export default class Navbar3 extends Component {
   render() {
     return (
       <>
-        <nav className="sub-nav-bar d-flex justify-content-center contenido">
+        <nav className="sub-nav-bar d-flex justify-content-center m-0">
           <div className="d-flex justify-content-center align-items-center navbar3-item">
             <a href="/404" className="nav-bar-link">
               <FaShoppingBasket size={styles.iconSize} />

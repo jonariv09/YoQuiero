@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import './index.scss'
-import NavBar from '../../components/NavBar'
 import CreateStoreForm from '../../components/CreateStoreForm'
-import AboveNavBar from '../../components/AboveNavBar'
+import Navbar1 from '../../components/Navbar1'
+import Navbar from '../../components/Navbar'
+import Navbar3 from '../../components/Navbar3'
 import BusinessPreview from '../../components/BusinessPreview'
 
 export default class CreateStore extends Component {
@@ -12,8 +13,9 @@ export default class CreateStore extends Component {
         <div className="wrapper-store-page">
           <div className="content-wrapper-store-page">
             <div className="content-page">
-              <AboveNavBar />
-              <NavBar />
+              <Navbar1 />
+              <Navbar />
+              <Navbar3 />
               <div className="container">
                 <div className="row">
                   <div className="col-xl-4">

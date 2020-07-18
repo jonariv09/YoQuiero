@@ -1,49 +1,21 @@
 import React, {Component} from 'react'
-import NavBar from '../../components/NavBar'
+import NavBar from '../../components/Navbar'
+import Navbar3 from '../../components/Navbar3'
+import CounterPrepurchase from '../../components/CounterPrepurchase'
 
 import computadoraGamer from '../../assets/images/computadoraGamer.jpg'
 
-import {FiStar, FiMinusSquare, FiPlusSquare} from 'react-icons/fi'
+import {FiStar} from 'react-icons/fi'
 
 import './index.scss'
 import './overwrite.scss'
 
 export default class PrePurchase extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {quantity: 1, priceAdded: 20000, productPrice: 20000}
-
-    this.handleMinusQuantity = this.handleMinusQuantity.bind(this)
-    this.handleMoreQuantity = this.handleMoreQuantity.bind(this)
-  }
-
-  handleMinusQuantity() {
-    if (this.state.quantity > 1) {
-      this.setState({
-        quantity: this.state.quantity - 1,
-      })
-
-      this.setState({
-        priceAdded: this.state.priceAdded - this.state.productPrice,
-      })
-    }
-  }
-
-  handleMoreQuantity() {
-    this.setState({
-      quantity: this.state.quantity + 1,
-    })
-
-    this.setState({
-      priceAdded: this.state.priceAdded + this.state.productPrice,
-    })
-  }
-
   render() {
     return (
       <>
         <NavBar />
+        <Navbar3 />
 
         <div className="container pre-purchase">
           <div className="row mt-5">
@@ -89,30 +61,7 @@ export default class PrePurchase extends Component {
                   <span className="pr-3 text-muted"> Envio: </span> C$ 25
                 </p>
 
-                <p className="font-weight-bold">
-                  <span className="pr-3 text-muted"> Precio: </span> C${' '}
-                  {this.state.priceAdded}
-                </p>
-
-                <div className="quantity-container">
-                  <span className="text-muted"> Cantidad: </span>
-
-                  <button
-                    className="quantity-less-button btn"
-                    onClick={this.handleMinusQuantity}
-                  >
-                    <FiMinusSquare />
-                  </button>
-
-                  <span className="quantity-number">{this.state.quantity}</span>
-
-                  <button
-                    className="quantity-more-button btn"
-                    onClick={this.handleMoreQuantity}
-                  >
-                    <FiPlusSquare />
-                  </button>
-                </div>
+                <CounterPrepurchase />
               </div>
 
               <div className="buttons-container mt-4 mb-5">

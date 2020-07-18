@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 
 import './index.scss'
 import './overwrite.scss'
-import NavBar from '../../components/NavBar'
+import NavBar from '../../components/Navbar'
+import Navbar3 from '../../components/Navbar3'
 
 import {FiTrash2, FiHeart, FiMinus} from 'react-icons/fi'
 
@@ -17,6 +18,7 @@ export default class ShoppingCar extends Component {
     return (
       <>
         <NavBar />
+        <Navbar3 />
 
         <div className="container shopping-car">
           <div className="row">

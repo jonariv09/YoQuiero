@@ -2,11 +2,9 @@ import React, {Component} from 'react'
 
 import {FiCamera, FiPhone, FiMail} from 'react-icons/fi'
 
-import AboveNavBar from '../../components/AboveNavBar'
-import NavBar from '../../components/NavBar'
+import NavBar from '../../components/Navbar'
+import NavBar3 from '../../components/Navbar3'
 import ProductsSellerProfile from '../../components/ProductsSellerProfile'
-import BottomNavBar from '../../components/BottomNavBar'
-import MessageBox from '../../components/MessageBox'
 
 import './index.scss'
 import './overwrite.scss'
@@ -45,8 +43,8 @@ export default class StoreProfile extends Component {
   render() {
     return (
       <>
-        <AboveNavBar />
         <NavBar />
+        <NavBar3 />
 
         <div className="container position-relative">
           <div className="card-business-preview">
@@ -212,8 +210,6 @@ export default class StoreProfile extends Component {
             </div>
           </div>
           <ProductsSellerProfile />
-
-          <BottomNavBar />
         </div>
         {/*  container */}
       </>
