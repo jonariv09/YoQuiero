@@ -5,6 +5,7 @@ import {FiCamera, FiPhone, FiMail} from 'react-icons/fi'
 import NavBar from '../../components/Navbar'
 import NavBar3 from '../../components/Navbar3'
 import ProductsSellerProfile from '../../components/ProductsSellerProfile'
+import BottomNavBar from '../../components/BottomNavBar'
 
 import './index.scss'
 import './overwrite.scss'
@@ -210,6 +211,8 @@ export default class StoreProfile extends Component {
             </div>
           </div>
           <ProductsSellerProfile />
+
+          <BottomNavBar />
         </div>
         {/*  container */}
       </>
