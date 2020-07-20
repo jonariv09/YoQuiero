@@ -38,3 +38,23 @@
   margin-right: 5px;
   color: rgb(94, 94, 94);
 }
+
+.input-main-search {
+  border-right: none;
+}
+
+.icon-main-search {
+  color: white;
+}
+
+.search-text-group {
+  border: none;
+  background: rgb(255, 120, 1);
+}
+.search-text-group:hover {
+  background: rgb(255, 147, 52);
+}
+
+.form-control-main-search {
+  border-radius: 10px;
+}
