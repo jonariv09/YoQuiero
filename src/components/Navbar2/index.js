@@ -133,6 +133,9 @@ export default class Navbar2 extends Component {
                 <a className="dropdown-item d-flex align-items-center" href="#">
                   Español
                 </a>
+                <a className="dropdown-item d-flex align-items-center" href="#">
+                  Ingles
+                </a>
               </div>
             </div>
             <div className="col-4 d-none d-md-block">
