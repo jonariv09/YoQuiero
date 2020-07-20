@@ -1,71 +1,35 @@
-.main-navbar {
-  font-size: 13px;
-  font-family: OpenSans;
-  padding: 8px 16px 0px 16px;
-  display: block;
-  background-color: rgb(255, 255, 255);
-  z-index: 1;
-}
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
 
-.img-logo {
+.image-logo {
   width: 150px;
 }
-.input-main-search {
-  border-right: none;
-}
 
-.icon-main-search {
-  color: white;
-}
-
-.search-text-group {
+.navbar-toggler {
   border: none;
-  background: rgb(255, 120, 1);
 }
 
-.form-control-main-search {
-  border-radius: 10px;
-}
-
-.item,
-.icon-item,
-.icon-link-navbar {
-  color: rgb(102, 102, 102);
-}
-
-.icon-link-navbar:hover {
-  color: rgb(158, 158, 158);
-  text-decoration: none;
-}
-
-.item {
+.responsive-navbar {
   display: flex;
-  margin: 0 1.4em;
+  list-style: none;
+  border: none;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.language-dropdown {
-  cursor: pointer;
+.responsive-navbar .responsive-navbar-item {
+  margin-left: 0.5rem;
 }
 
-.language-icon {
-  width: 1.6em;
+@media (min-width: map-get($grid-breakpoints, 'md')) {
+  .responsive-navbar .responsive-navbar-item {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
-.badge-shopping-cart {
-  background-color: rgb(255, 120, 1);
-  color: white;
-  position: absolute;
-  top: -40%;
-  left: 100%;
-}
-
-.divider-sub-navbar {
-  height: 80%;
-}
-
-.ilum:hover {
-  background: #f17100;
-}
-.ilum-buscador:hover {
-  background: #f9f9f9;
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
+  .image-logo {
+    width: 110px;
+  }
 }
