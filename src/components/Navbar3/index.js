@@ -1,13 +1,7 @@
 import React, {Component} from 'react'
 import './index.scss'
-import {
-  FaRegMoneyBillAlt,
-  FaMoneyBillWaveAlt,
-  FaShoppingBasket,
-} from 'react-icons/fa'
+import {FaShoppingBasket} from 'react-icons/fa'
 
-import {AiOutlineDollarCircle} from 'react-icons/ai'
-import {RiMoneyEuroCircleLine} from 'react-icons/ri'
 const styles = {
   iconSize: 20,
 }
