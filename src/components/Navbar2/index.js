@@ -3,7 +3,10 @@ import './index.scss'
 import Logo from '../../assets/images/logo.png'
 import {FiShoppingCart, FiSearch, FiUser} from 'react-icons/fi'
 import {MdLanguage} from 'react-icons/md'
-import {AiOutlineSearch} from 'react-icons/ai'
+import {AiOutlineSearch, AiOutlineDollarCircle} from 'react-icons/ai'
+import {GrMoney} from 'react-icons/gr'
+import {FaRegMoneyBillAlt} from 'react-icons/fa'
+import {RiMoneyEuroCircleLine} from 'react-icons/ri'
 
 const styles = {
   iconSize: 21,
@@ -20,12 +23,40 @@ export default class Navbar2 extends Component {
           {/*****************************************************************************/}
           {/*****************************************************************************/}
           {/*Logo*/}
-          <div className="col-3">
+          <div className="col-2">
             <a className="logo navbar-brand mr-auto " href="#">
               <img src={Logo} className="image-logo" alt="" />
             </a>
           </div>
           {/*Fin Logo*/}
+          {/*****************************************************************************/}
+          {/*****************************************************************************/}
+          {/*tipo de moneda*/}
+          <div className="dropdown col-1 ">
+            <GrMoney
+              href="#"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            />
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <FaRegMoneyBillAlt style={icons.size} className="icon" />{' '}
+                Cordoba
+              </a>
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <AiOutlineDollarCircle style={icons.size} className="icon" />{' '}
+                Dolar
+              </a>
+
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <RiMoneyEuroCircleLine style={icons.size} className="icon" />{' '}
+                Euro
+              </a>
+            </div>
+          </div>
+          {/*Fin tipo de moneda*/}
           {/*****************************************************************************/}
           {/*****************************************************************************/}
           {/*Iconos en tamaño responsive*/}
