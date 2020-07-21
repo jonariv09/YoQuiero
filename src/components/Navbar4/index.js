@@ -8,7 +8,7 @@ export default class Navbar4 extends Component {
   render() {
     return (
       <>
-        <nav className=" color letras-color">
+        <nav className=" color letras-color d-none d-sm-none d-md-block">
           <ul className="nav nav-pills nav-fill">
             <li className="nav-item">
               <a href="#" className="linki">

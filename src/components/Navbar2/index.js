@@ -2,11 +2,18 @@ import React, {Component} from 'react'
 import './index.scss'
 import Logo from '../../assets/images/logo.png'
 import {FiShoppingCart, FiSearch, FiUser} from 'react-icons/fi'
-import {MdLanguage} from 'react-icons/md'
+import {MdLanguage, MdAccountCircle} from 'react-icons/md'
 import {AiOutlineSearch, AiOutlineDollarCircle} from 'react-icons/ai'
 import {GrMoney} from 'react-icons/gr'
-import {FaRegMoneyBillAlt} from 'react-icons/fa'
-import {RiMoneyEuroCircleLine} from 'react-icons/ri'
+import {FaRegMoneyBillAlt, FaTruckLoading} from 'react-icons/fa'
+import {BsFillGearFill} from 'react-icons/bs'
+import {
+  RiMoneyEuroCircleLine,
+  RiCustomerService2Line,
+  RiShieldStarLine,
+} from 'react-icons/ri'
+import {GiPresent} from 'react-icons/gi'
+import {format} from 'prettier'
 
 const styles = {
   iconSize: 21,
@@ -73,7 +80,7 @@ export default class Navbar2 extends Component {
           {/*****************************************************************************/}
           {/*Boton desplegable en tamaño responsive*/}
           <button
-            class="navbar-toggler"
+            className="navbar-toggler d-md-none"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -152,16 +159,47 @@ export default class Navbar2 extends Component {
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="#">
+                  <BsFillGearFill
+                    className="icon d-md-none"
+                    zise={icons.zise}
+                  />
                   Soluciones <span class="sr-only"> (current) </span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
+                  <RiShieldStarLine
+                    className="icon d-md-none"
+                    zise={icons.zise}
+                  />
                   Porque Elegirnos
                 </a>
               </li>
-
-              <li class="nav-item d-none d-md-block ">
+              <li class="nav-item d-md-none">
+                <a class="nav-link" href="#">
+                  <FaTruckLoading className="icon" zise={icons.zise} />
+                  Envios a tu departamento
+                </a>
+              </li>
+              <li class="nav-item d-md-none">
+                <a class="nav-link" href="#">
+                  <GiPresent className="icon" zise={icons.zise} />
+                  Especiales de hoy
+                </a>
+              </li>
+              <li class="nav-item d-md-none">
+                <a class="nav-link" href="#">
+                  <RiCustomerService2Line className="icon" zise={icons.zise} />
+                  Servicio al cliente
+                </a>
+              </li>
+              <li class="nav-item d-md-none">
+                <a class="nav-link" href="#">
+                  <MdAccountCircle className="icon" zise={icons.zise} />
+                  Crear una cuenta
+                </a>
+              </li>
+              <li class="nav-item d-none d-md-block">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
                   <FiShoppingCart
                     size={icons.size}
