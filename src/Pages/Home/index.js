@@ -5,7 +5,7 @@ import Navbar3 from '../../components/Navbar3/index.js'
 import Navbar4 from '../../components/Navbar4/index.js'
 import Categorias from '../../components/Categories/index.js'
 import Carousel from '../../components/Carousel/index.js'
-import Seccion3 from '../../components/Annoucement/index.js'
+import Annoucement from '../../components/Annoucement/index.js'
 import Slider1 from '../../components/Slider1/index.js'
 import Slider2 from '../../components/Slider2/index.js'
 import Slider3 from '../../components/Slider3/index.js'
@@ -28,7 +28,7 @@ export default function Home() {
             <Carousel />
           </div>
           <div className="col-xl-3">
-            <Seccion3 />
+            <Annoucement />
           </div>
         </div>
         <Slider1 />
