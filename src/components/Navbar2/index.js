@@ -38,7 +38,7 @@ export default class Navbar2 extends Component {
           {/*****************************************************************************/}
           {/*****************************************************************************/}
           {/*tipo de moneda*/}
-          <div className="dropdown col-1 ">
+          <div className="dropdown col-1 d-none d-md-block">
             <GrMoney
               href="#"
               id="dropdownMenuButton"
