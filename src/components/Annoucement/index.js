@@ -6,7 +6,7 @@ export default class Annoucement extends Component {
   render() {
     return (
       <>
-        <div className="categories">
+        <div className="categories d-none d-md-block">
           <div className="card ancho">
             <img src={Certificado} class="card-img-top ta" alt="..." />
             <div className="card-body">
