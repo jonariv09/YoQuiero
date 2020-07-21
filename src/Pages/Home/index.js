@@ -20,12 +20,12 @@ export default function Home() {
       <Navbar2 />
       <Navbar3 />
       <Navbar4 />
-      <div className="container-fluid px-4">
+      <div className="container-fluid px-4 ">
         <div className="row mt-4 px-5">
-          <div className="col-xl-3">
+          <div className="col-xl-3 d-none d-md-block">
             <Categorias />
           </div>
-          <div className="col-xl-6">
+          <div className="col-xl-6 d-none d-md-block">
             <Carousel />
           </div>
           <div className="col-xl-3">

@@ -72,7 +72,7 @@ export default class Carousel extends Component {
         </div>
 
         <br></br>
-        <div className="container color-contenedor">
+        <div className="container color-contenedor d-none d-md-block">
           <div className="row text-align-center">
             <div className="col-3">
               <div className="card">
