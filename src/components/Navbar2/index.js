@@ -13,7 +13,6 @@ import {
   RiShieldStarLine,
 } from 'react-icons/ri'
 import {GiPresent} from 'react-icons/gi'
-import {format} from 'prettier'
 
 const styles = {
   iconSize: 21,
