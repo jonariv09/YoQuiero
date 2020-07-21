@@ -9,6 +9,7 @@ import Annoucement from '../../components/Annoucement/index.js'
 import Slider1 from '../../components/Slider1/index.js'
 import Slider2 from '../../components/Slider2/index.js'
 import Slider3 from '../../components/Slider3/index.js'
+import Products from '../../components/Product/index.js'
 import Informacion from '../../components/informacion/index.js'
 import Footer from '../../components/Footer/index.js'
 
@@ -32,10 +33,9 @@ export default function Home() {
           </div>
         </div>
         <Slider1 />
-        <br></br>
         <Slider2 />
-        <br></br>
         <Slider3 />
+        <Products />
         <br></br>
         <Informacion />
       </div>

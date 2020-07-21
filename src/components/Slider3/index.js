@@ -14,7 +14,7 @@ export default class Slider3 extends Component {
     return (
       <>
         <br></br>
-        <div className="col-11 container color-contenedor decoracion">
+        <div className="col-11 container color-contenedor decoracion d-none d-md-block">
           <h4 className="dec">
             Tiendas de tu Zona
             <a href="#">Ver mas</a>

@@ -15,7 +15,7 @@ export default class Informacion extends Component {
   render() {
     return (
       <>
-        <div className="col-11 container tam-text">
+        <div className="col-11 container tam-text d-none d-md-block">
           <div className="row color-fila">
             <div className="col-2 text-center">
               <span className="information-icon">
