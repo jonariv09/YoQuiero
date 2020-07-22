@@ -163,44 +163,6 @@ export default class StoreProfile extends Component {
                       Envios
                     </a>
                   </li>
-
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="/404"
-                      id="navbarDropdown"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Ver más
-                    </a>
-                    <div
-                      className="dropdown-menu"
-                      aria-labelledby="navbarDropdown"
-                    >
-                      <a className="dropdown-item" href="/404">
-                        Action
-                      </a>
-                      <a className="dropdown-item" href="/404">
-                        Another action
-                      </a>
-                      <div className="dropdown-divider"></div>
-                      <a className="dropdown-item" href="/404">
-                        Something else here
-                      </a>
-                    </div>
-                  </li>
-
-                  <li className="nav-item icon-item-shadow active">
-                    <a
-                      className="nav-link icon-link-shadow icon-link"
-                      href="/404"
-                    >
-                      Editar perfil
-                    </a>
-                  </li>
                 </ul>
                 <ul className="navbar-nav navbar-nav-2">
                   <li className="nav-item active">

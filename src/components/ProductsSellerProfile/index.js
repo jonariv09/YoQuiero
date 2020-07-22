@@ -19,7 +19,7 @@ export default class ProductsSellerProfile extends Component {
     return (
       <>
         <div className="row main-section pt-3">
-          <div className="col-xl-3">
+          <div className="col-md-3">
             <div className="add-product-card card">
               <button className="add-product-button btn">
                 <FiPlus size={icon.size} />
@@ -30,11 +30,11 @@ export default class ProductsSellerProfile extends Component {
             </div>
           </div>
 
-          <div className="col-12 col-xl-9 ">
+          <div className="col-12 col-md-9 p-4">
             <div className="row products-container">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(
                 (index, value) => (
-                  <div className="col-6">
+                  <div className="col-6 col-md-4 col-lg-3">
                     <div className="product">
                       <a href="/404">
                         <img

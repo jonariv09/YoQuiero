@@ -10,11 +10,13 @@ $product-size: 8rem;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      left: 0;
       top: 7rem;
 
       .business-name-text {
         margin-top: 1rem;
         text-align: center;
+        margin-left: 0;
       }
     }
 
@@ -83,4 +85,18 @@ $product-size: 8rem;
   }
 
   // </ProductsSellerProfile>
+}
+
+@media (min-width: map-get($grid-breakpoints, 'md')) {
+  .card-business-preview {
+    .navbar-business {
+      .navbar-nav-1 {
+        display: flex;
+        flex-direction: row;
+        .nav-item {
+          padding: 0 0.5rem;
+        }
+      }
+    }
+  }
 }
