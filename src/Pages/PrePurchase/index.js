@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import NavBar from '../../components/Navbar'
+import NavBar1 from '../../components/Navbar1/index.js'
+import NavBar2 from '../../components/Navbar2/index.js'
 import Navbar3 from '../../components/Navbar3'
 import CounterPrepurchase from '../../components/CounterPrepurchase'
 
@@ -14,12 +15,13 @@ export default class PrePurchase extends Component {
   render() {
     return (
       <>
-        <NavBar />
+        <NavBar1 />
+        <NavBar2 />
         <Navbar3 />
 
         <div className="container pre-purchase">
           <div className="row mt-5">
-            <div className="col-6">
+            <div className="col-md-6 col-12 d-none d-md-block">
               <div className="d-flex flex-column align-items-center">
                 <img src={computadoraGamer} className="big-image" alt="" />
               </div>
@@ -28,8 +30,8 @@ export default class PrePurchase extends Component {
                 <img src={computadoraGamer} className="small-image" alt="" />
               </div>
             </div>
-            <div className="col-6 pt-5">
-              <p className="h4 text-muted text-header">
+            <div className="col-md-4 col-12 pt-5">
+              <p className="h5 text-muted text-header">
                 Computadora NOC, con parlantes, teclado y mouse gamer
               </p>
               <p className="text-description">

@@ -201,7 +201,12 @@ export default class Navbar2 extends Component {
                 </a>
               </li>
               <li class="nav-item d-none d-md-block">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+                <a
+                  class="nav-link"
+                  href="/shopping-car"
+                  tabindex="-1"
+                  aria-disabled="true"
+                >
                   <FiShoppingCart
                     size={icons.size}
                     className="responsive-navbar-item"
