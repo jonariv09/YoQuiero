@@ -67,14 +67,18 @@ export default class Navbar2 extends Component {
           {/*****************************************************************************/}
           {/*Iconos en tamaño responsive*/}
           <div className="responsive-navbar navbar-toggler row">
-            <FiShoppingCart
-              size={icons.size}
-              className="responsive-navbar-item margin "
-            />
-            <FiUser
-              size={icons.size}
-              className="responsive-navbar-item margin"
-            />
+            <a href="/shopping-car">
+              <FiShoppingCart
+                size={icons.size}
+                className="responsive-navbar-item margin "
+              />
+            </a>
+            <a href="/storeProfile">
+              <FiUser
+                size={icons.size}
+                className="responsive-navbar-item margin"
+              />
+            </a>
           </div>
           {/*Fin Iconos en tamaño responsive*/}
           {/*****************************************************************************/}
@@ -147,7 +151,11 @@ export default class Navbar2 extends Component {
               </div>
             </div>
             <div className="col-4 d-none d-md-block">
-              <button className="btn btn-sm btn-success" title="Iniciar sesión">
+              <button
+                href="/storeProfile"
+                className="btn btn-sm btn-success"
+                title="Iniciar sesión"
+              >
                 Iniciar sesión
               </button>
             </div>
