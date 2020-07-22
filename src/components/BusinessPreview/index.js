@@ -7,6 +7,7 @@ import {
   FiClock,
   FiStar,
   FiSearch,
+  FiTag,
 } from 'react-icons/fi'
 
 import BannerPreview from '../../assets/images/banner-preview.jpg'
@@ -21,23 +22,26 @@ export default class BusinessPreview extends Component {
       <>
         <div className="card card-business-preview my-3">
           <p className="font-weight-bold"> Vista previa de tu negocio </p>
-          <div className="card-header">
+          <div className="card-header business-preview-header">
             <img
               src={BannerPreview}
               className="banner-business-preview"
               alt=""
               width="100%"
             />
-            <div className="px-3 d-flex align-items-end business-name-container">
+            <div className="px-3 d-flex business-name-container">
               <img src={StorePicture} className="img-thumbnail" alt="" />
-              <div className="ml-3 mb-4">
+              <div className="business-name-text">
                 <p className="m-0 font-weight-bold"> Nombre de tu negocio </p>
-                <p className="m-0 font-weight-light"> Categoría </p>
+                <p className="m-0 font-weight-light">
+                  {' '}
+                  <FiTag className="icon-business" /> Categoría{' '}
+                </p>
               </div>
             </div>
 
-            <nav className="navbar-business-preview navbar navbar-expand-lg p-0">
-              <ul className="navbar-nav">
+            <nav className="navbar-business-preview navbar navbar-expand-lg">
+              <ul className="navbar-nav navbar-nav-1">
                 <li className="nav-item active">
                   <a className="nav-link" href="/404">
                     Mis productos
@@ -53,37 +57,9 @@ export default class BusinessPreview extends Component {
                     Crear publicidad
                   </a>
                 </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="/404"
-                    id="navbarDropdown"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Ver más
-                  </a>
-                  <div
-                    className="dropdown-menu"
-                    aria-labelledby="navbarDropdown"
-                  >
-                    <a className="dropdown-item" href="/404">
-                      Action
-                    </a>
-                    <a className="dropdown-item" href="/404">
-                      Another action
-                    </a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="/404">
-                      Something else here
-                    </a>
-                  </div>
-                </li>
               </ul>
 
-              <ul className="navbar-nav ml-3">
+              <ul className="navbar-nav navbar-nav-2 ml-3">
                 <li className="nav-item icon-item-shadow active">
                   <a className="nav-link icon-link-shadow" href="/404">
                     <FiSearch />

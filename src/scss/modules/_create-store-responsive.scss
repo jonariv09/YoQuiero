@@ -1,0 +1,72 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
+  .row {
+    flex-direction: column;
+  }
+
+  // <BusinessPreview>
+  .card-business-preview {
+    font-size: 12px;
+
+    .banner-business-preview {
+      height: 10rem;
+
+      .business-preview-header {
+      }
+    }
+
+    .business-name-container {
+      left: 0;
+      right: 0;
+      bottom: 3.5em;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .img-thumbnail {
+        height: 100px;
+        width: 100px;
+      }
+      .business-name-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+      }
+    }
+
+    .navbar-business-preview {
+      padding-top: 2.6em;
+      .navbar-nav {
+        font-size: 12px;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .navbar-nav-1 {
+        width: 100%;
+      }
+
+      .navbar-nav-2 {
+        display: none;
+      }
+    }
+
+    .card-body {
+      padding: 1em 0;
+      .description-section {
+        width: 100%;
+      }
+      .announcement-input {
+        width: 100%;
+        padding: 0 0.2em;
+      }
+    }
+  }
+  // </BusinessPreview>
+}
+
+@media (max-width: map-get($grid-breakpoints, 'md')) {
+}
