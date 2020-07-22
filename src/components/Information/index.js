@@ -11,7 +11,7 @@ const icons = {
   fontSize: 100,
 }
 
-export default class Informacion extends Component {
+export default class Information extends Component {
   render() {
     return (
       <>

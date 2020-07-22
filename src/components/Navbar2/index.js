@@ -25,7 +25,7 @@ export default class Navbar2 extends Component {
   render() {
     return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
           {/*****************************************************************************/}
           {/*****************************************************************************/}
           {/*Logo*/}

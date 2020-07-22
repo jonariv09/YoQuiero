@@ -122,7 +122,7 @@ export default class Footer extends Component {
               </div>
             </div>
           </div>
-          <div className="footer-copyright text-center py-3 final-color footerbajo">
+          <div className="footer-copyright text-center py-3 final-color footerbajo d-none d-md-block">
             <div className="row ancho">
               <div className="col-2">
                 <img src={Logo} className="dimen" />

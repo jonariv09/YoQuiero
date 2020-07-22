@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './index.css'
+import './index.scss'
 import Certificado from '../../assets/images/certific.gif'
 import Logo from '../../assets/images/logo.png'
 export default class Annoucement extends Component {

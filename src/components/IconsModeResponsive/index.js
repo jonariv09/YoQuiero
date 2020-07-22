@@ -11,7 +11,7 @@ import {IoMdFootball} from 'react-icons/io'
 import {GiPresent} from 'react-icons/gi'
 import {GiTomato} from 'react-icons/gi'
 const style = {
-  iconSize: 40,
+  iconSize: 35,
 }
 export default class IconsModeResponsive extends Component {
   render() {

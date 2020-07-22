@@ -9,8 +9,8 @@ import Annoucement from '../../components/Annoucement/index.js'
 import Slider1 from '../../components/Slider1/index.js'
 import Slider2 from '../../components/Slider2/index.js'
 import Slider3 from '../../components/Slider3/index.js'
-import Products from '../../components/Product/index.js'
-import Informacion from '../../components/informacion/index.js'
+import Product from '../../components/Product/index.js'
+import Information from '../../components/Information/index.js'
 import Footer from '../../components/Footer/index.js'
 import IconsModeResponsive from 'components/IconsModeResponsive/index.js'
 
@@ -39,14 +39,10 @@ export default function Home() {
         <Slider2 />
         <Slider3 />
         <br></br>
-        <Informacion />
+        <Information />
       </div>
-
       <IconsModeResponsive />
-      <div className="container-fluid px-4">
-        <Products />
-      </div>
-
+      <Product />
       <Footer />
     </>
   )

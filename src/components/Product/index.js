@@ -3,8 +3,8 @@ import React, {Component} from 'react'
 import image from '../../assets/images/smart-watch.jpg'
 
 import './index.scss'
-
-export default class Products extends Component {
+import './overwrite.scss'
+export default class Product extends Component {
   render() {
     return (
       <>
@@ -29,7 +29,6 @@ export default class Products extends Component {
                     </div>
                   </div>
                 </div>
-                <br></br>
               </div>
             ))}
           </div>
