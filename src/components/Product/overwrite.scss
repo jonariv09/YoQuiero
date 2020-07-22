@@ -1,0 +1,30 @@
+@import '../../scss/modules/responsive.scss';
+
+//@include text-reponsive();
+
+.card,
+.card-header {
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+.card {
+  margin-top: 25px;
+}
+
+.card-header {
+  padding: 0;
+}
+
+[class*='col-'] {
+  padding-right: 0.2em;
+  padding-left: 0.2em;
+}
+
+.row {
+  margin: 0;
+}
+
+.container {
+}

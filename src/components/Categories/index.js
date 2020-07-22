@@ -10,7 +10,7 @@ export default class Categorias extends Component {
   render() {
     return (
       <>
-        <div className="categories">
+        <div className="categories d-none d-md-block">
           <span className="text-uppercase"> Categorias </span>
           <li className="item-categories">
             {' '}

@@ -16,14 +16,14 @@ export default class Carousel extends Component {
       <>
         <div
           id="carouselExampleIndicators"
-          class="carousel slide"
+          className="carousel slide"
           data-ride="carousel"
         >
           <ol class="carousel-indicators">
             <li
               data-target="#carouselExampleIndicators"
               data-slide-to="0"
-              class="active"
+              className="active"
             ></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -72,7 +72,7 @@ export default class Carousel extends Component {
         </div>
 
         <br></br>
-        <div className="container color-contenedor">
+        <div className="container color-contenedor d-none d-md-block">
           <div className="row text-align-center">
             <div className="col-3">
               <div className="card">

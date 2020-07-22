@@ -11,11 +11,11 @@ const icons = {
   fontSize: 100,
 }
 
-export default class Informacion extends Component {
+export default class Information extends Component {
   render() {
     return (
       <>
-        <div className="col-11 container tam-text">
+        <div className="col-11 container tam-text d-none d-md-block">
           <div className="row color-fila">
             <div className="col-2 text-center">
               <span className="information-icon">

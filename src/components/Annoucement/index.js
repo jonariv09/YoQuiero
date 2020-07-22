@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import './index.css'
+import './index.scss'
 import Certificado from '../../assets/images/certific.gif'
 import Logo from '../../assets/images/logo.png'
-export default class Seccion3 extends Component {
+export default class Annoucement extends Component {
   render() {
     return (
       <>
-        <div className="categories">
+        <div className="categories d-none d-md-block">
           <div className="card ancho">
             <img src={Certificado} class="card-img-top ta" alt="..." />
             <div className="card-body">

@@ -17,7 +17,7 @@ export default class Slider2 extends Component {
   render() {
     return (
       <>
-        <div className="col-11 container color-contenedor">
+        <div className="col-11 container color-contenedor d-none d-md-block">
           <h4 className="dec">
             Los productos comestibles Más comprados<a href="#">Ver mas</a>
           </h4>

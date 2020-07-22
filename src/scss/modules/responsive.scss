@@ -1,0 +1,31 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+$text-responsive: (
+  xs: 12px,
+  sm: 12px,
+  md: 15px,
+  lg: 15px,
+  xl: 15px,
+);
+
+@mixin text-reponsive(
+  $text-sizes: $text-responsive,
+  $breakpoints: $grid-breakpoints
+) {
+  @each $letter, $size in $breakpoints {
+    @media (min-width: $size) {
+      @for $number from 1 through 12 {
+        @if $letter == xs {
+          .col-#{$number} {
+            font-size: map-get($text-sizes, $letter);
+          }
+        } @else {
+          .col-#{$letter}-#{$number} {
+            font-size: map-get($text-sizes, $letter);
+          }
+        }
+      }
+    }
+  }
+}
