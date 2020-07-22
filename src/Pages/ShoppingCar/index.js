@@ -2,12 +2,14 @@ import React, {Component} from 'react'
 
 import './index.scss'
 import './overwrite.scss'
-import NavBar from '../../components/Navbar'
+import NavBar1 from '../../components/Navbar1/index.js'
+import NavBar2 from '../../components/Navbar2/index.js'
 import Navbar3 from '../../components/Navbar3'
 
 import {FiTrash2, FiHeart, FiMinus} from 'react-icons/fi'
 
 import cameraImage from '../../assets/images/cameraImage.jpg'
+import Navbar1 from 'components/Navbar1'
 
 const icons = {
   size: 20,
@@ -17,7 +19,8 @@ export default class ShoppingCar extends Component {
   render() {
     return (
       <>
-        <NavBar />
+        <NavBar1 />
+        <NavBar2 />
         <Navbar3 />
 
         <div className="container shopping-car">
