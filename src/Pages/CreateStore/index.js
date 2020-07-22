@@ -7,7 +7,7 @@ import BusinessPreview from '../../components/BusinessPreview'
 
 import './index.scss'
 import './overwrite.scss'
-import '../../scss/modules/_create-store-responsive.scss'
+import '../../scss/responsive/_create-store.scss'
 
 export default class CreateStore extends Component {
   render() {

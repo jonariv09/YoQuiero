@@ -9,7 +9,7 @@ import BottomNavBar from '../../components/BottomNavBar'
 
 import './index.scss'
 import './overwrite.scss'
-import '../../scss/modules/_store-profile-responsive.scss'
+import '../../scss/responsive/_store-profile.scss'
 
 export default class StoreProfile extends Component {
   constructor(props) {
