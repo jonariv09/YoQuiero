@@ -16,7 +16,7 @@ export default class Carousel extends Component {
       <>
         <div
           id="carouselExampleIndicators"
-          className="carousel slide d-none d-md-block"
+          className="carousel slide"
           data-ride="carousel"
         >
           <ol class="carousel-indicators">

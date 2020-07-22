@@ -12,6 +12,7 @@ import Slider3 from '../../components/Slider3/index.js'
 import Products from '../../components/Product/index.js'
 import Informacion from '../../components/informacion/index.js'
 import Footer from '../../components/Footer/index.js'
+import IconsModeResponsive from 'components/IconsModeResponsive/index.js'
 
 export default function Home() {
   return (
@@ -20,24 +21,30 @@ export default function Home() {
       <Navbar2 />
       <Navbar3 />
       <Navbar4 />
-      <div className="container-fluid px-4 ">
+
+      <div className="container-fluid px-4 d-none d-md-block">
         <div className="row mt-4 px-5">
-          <div className="col-xl-3 d-none d-md-block">
+          <div className="col-xl-3 ">
             <Categorias />
           </div>
-          <div className="col-xl-6 d-none d-md-block">
+          <div className="col-xl-6 ">
             <Carousel />
           </div>
           <div className="col-xl-3">
             <Annoucement />
           </div>
         </div>
+
         <Slider1 />
         <Slider2 />
         <Slider3 />
-        <Products />
         <br></br>
         <Informacion />
+      </div>
+
+      <IconsModeResponsive />
+      <div className="container-fluid px-4">
+        <Products />
       </div>
 
       <Footer />

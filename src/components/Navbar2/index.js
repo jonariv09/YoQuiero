@@ -66,14 +66,10 @@ export default class Navbar2 extends Component {
           {/*****************************************************************************/}
           {/*****************************************************************************/}
           {/*Iconos en tamaño responsive*/}
-          <div className="responsive-navbar navbar-toggler">
-            <FiSearch
-              size={icons.size}
-              className="responsive-navbar-item margin"
-            />
+          <div className="responsive-navbar navbar-toggler row">
             <FiShoppingCart
               size={icons.size}
-              className="responsive-navbar-item margin"
+              className="responsive-navbar-item margin "
             />
             <FiUser
               size={icons.size}
