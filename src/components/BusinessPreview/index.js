@@ -34,8 +34,7 @@ export default class BusinessPreview extends Component {
               <div className="business-name-text">
                 <p className="m-0 font-weight-bold"> Nombre de tu negocio </p>
                 <p className="m-0 font-weight-light">
-                  {' '}
-                  <FiTag className="icon-business" /> Categoría{' '}
+                  <FiTag className="icon-business" /> Categoría
                 </p>
               </div>
             </div>

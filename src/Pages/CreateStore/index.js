@@ -20,11 +20,11 @@ export default class CreateStore extends Component {
               {/*<Navbar />*/}
               {/*<Navbar3 />*/}
               <div className="container">
-                <div className="row">
-                  <div className="col-12 col-lg-4">
+                <div className="row row-store-page">
+                  <div className="col1-store-page col-12 col-lg-4">
                     <CreateStoreForm />
                   </div>
-                  <div className="col-12  col-lg-8">
+                  <div className="col1-store-page col-12 col-lg-8">
                     <BusinessPreview />
                   </div>
                 </div>

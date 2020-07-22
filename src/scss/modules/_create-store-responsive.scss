@@ -2,7 +2,7 @@
 @import '~bootstrap/scss/variables';
 
 @media (max-width: map-get($grid-breakpoints, 'sm')) {
-  .row {
+  .row-store-page {
     flex-direction: column;
   }
 
@@ -24,10 +24,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       .img-thumbnail {
         height: 100px;
         width: 100px;
       }
+
       .business-name-text {
         display: flex;
         flex-direction: column;
@@ -39,6 +41,7 @@
 
     .navbar-business-preview {
       padding-top: 2.6em;
+
       .navbar-nav {
         font-size: 12px;
         flex-direction: row;
@@ -56,12 +59,13 @@
 
     .card-body {
       padding: 1em 0;
+
       .description-section {
         width: 100%;
       }
+
       .announcement-input {
         width: 100%;
-        padding: 0 0.2em;
       }
     }
   }
@@ -69,4 +73,39 @@
 }
 
 @media (max-width: map-get($grid-breakpoints, 'md')) {
+  .row-store-page {
+    flex-direction: column;
+
+    .col1-store-page {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .create-store-form {
+    width: 30rem;
+  }
+
+  .card-business-preview {
+    .navbar-business-preview {
+      .navbar-nav {
+        font-size: 12px;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .navbar-nav-1 {
+        .nav-item {
+          padding: 0 0.2em;
+        }
+      }
+    }
+
+    .business-name-container {
+      .business-name-text {
+        margin-left: 1em;
+      }
+    }
+  }
 }
