@@ -18,7 +18,7 @@ export default class ProductsSellerProfile extends Component {
   render() {
     return (
       <>
-        <div className="row main-section pt-3 px-3">
+        <div className="row main-section pt-3">
           <div className="col-xl-3">
             <div className="add-product-card card">
               <button className="add-product-button btn">
@@ -30,19 +30,21 @@ export default class ProductsSellerProfile extends Component {
             </div>
           </div>
 
-          <div className="col-xl-9">
+          <div className="col-12 col-xl-9 ">
             <div className="row products-container">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(
                 (index, value) => (
-                  <div className="product">
-                    <a href="/404">
-                      <img
-                        src={image}
-                        className="rounded product-image"
-                        alt=""
-                      />
-                    </a>
-                    <span className="d-block pt-1"> C$ 00.00 </span>
+                  <div className="col-6">
+                    <div className="product">
+                      <a href="/404">
+                        <img
+                          src={image}
+                          className="rounded product-image"
+                          alt=""
+                        />
+                      </a>
+                      <span className="d-block pt-1"> C$ 00.00 </span>
+                    </div>
                   </div>
                 )
               )}

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import {FiCamera, FiPhone, FiMail} from 'react-icons/fi'
+import {FiCamera, FiPhone, FiMail, FiTag, FiList, FiTruck} from 'react-icons/fi'
 
 import NavBar from '../../components/Navbar'
 import NavBar3 from '../../components/Navbar3'
@@ -9,6 +9,7 @@ import BottomNavBar from '../../components/BottomNavBar'
 
 import './index.scss'
 import './overwrite.scss'
+import '../../scss/modules/_store-profile-responsive.scss'
 
 export default class StoreProfile extends Component {
   constructor(props) {
@@ -44,8 +45,8 @@ export default class StoreProfile extends Component {
   render() {
     return (
       <>
-        <NavBar />
-        <NavBar3 />
+        {/*<NavBar />*/}
+        {/*<NavBar3 />*/}
 
         <div className="container position-relative">
           <div className="card-business-preview">
@@ -59,7 +60,7 @@ export default class StoreProfile extends Component {
                   />
                   <label
                     htmlFor="cover-picture"
-                    className="upload-picture-icon mb-0"
+                    className="upload-picture-icon"
                   >
                     <FiCamera />
                   </label>
@@ -89,7 +90,7 @@ export default class StoreProfile extends Component {
                 </div>
               )}
 
-              <div className="px-3 d-flex align-items-end business-name-container">
+              <div className="business-name-container">
                 <div className="thumbnail">
                   {this.state.profilePicture && (
                     <img
@@ -113,14 +114,16 @@ export default class StoreProfile extends Component {
                   />
                 </div>
 
-                <div className="ml-3 mb-4">
+                <div className="business-name-text">
                   <p className="m-0 font-weight-bold"> Nombre de tu negocio </p>
-                  <p className="m-0 font-weight-light"> Categoría </p>
+                  <p className="m-0 font-weight-light">
+                    <FiTag /> Categoría{' '}
+                  </p>
                 </div>
               </div>
 
               <nav className="navbar-business navbar navbar-expand-lg p-0">
-                <ul className="navbar-nav">
+                <ul className="navbar-nav navbar-nav-1">
                   <li className="nav-item">
                     <a className="nav-link" href="">
                       Productos
@@ -196,6 +199,28 @@ export default class StoreProfile extends Component {
                       href="/404"
                     >
                       Editar perfil
+                    </a>
+                  </li>
+                </ul>
+                <ul className="navbar-nav navbar-nav-2">
+                  <li className="nav-item active">
+                    <a className="nav-link" href="/404">
+                      <FiList className="services-icon" />
+                    </a>
+                  </li>
+                  <li className="nav-item active">
+                    <a className="nav-link" href="/404">
+                      <FiTruck className="services-icon" />
+                    </a>
+                  </li>
+                  <li className="nav-item active">
+                    <a className="nav-link" href="/404">
+                      <FiPhone className="services-icon" />
+                    </a>
+                  </li>
+                  <li className="nav-item active">
+                    <a className="nav-link" href="/404">
+                      <FiMail className="services-icon" />
                     </a>
                   </li>
                 </ul>
