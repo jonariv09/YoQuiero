@@ -4,21 +4,12 @@ import './index.scss'
 import './overwrite.scss'
 import NavBar1 from '../../components/Navbar1/index.js'
 import NavBar2 from '../../components/Navbar2/index.js'
-
-import NavBar from '../../components/Navbar'
-
 import Navbar3 from '../../components/Navbar3'
 
 import {FiTrash2, FiHeart, FiMinus} from 'react-icons/fi'
 
 import cameraImage from '../../assets/images/cameraImage.jpg'
 import Navbar1 from 'components/Navbar1'
-import Counter from '../../components/Counter'
-import Navbar2 from '../../components/Navbar2'
-
-import './index.scss'
-import './overwrite.scss'
-import '../../scss/responsive/_shopping-car.scss'
 
 const icons = {
   size: 20,
@@ -70,9 +61,6 @@ export default class ShoppingCar extends Component {
       <>
         <NavBar1 />
         <NavBar2 />
-
-        <Navbar2 />
-
         <Navbar3 />
 
         <div className="container shopping-car">
