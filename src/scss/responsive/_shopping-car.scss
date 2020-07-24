@@ -1,0 +1,34 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
+  .shopping-car {
+    [class*='col-'] {
+      padding: 0;
+    }
+
+    .products-car-container {
+      .card-product-car {
+        .card-product-car-image {
+          width: 5rem;
+          height: 5rem;
+        }
+
+        .information-description {
+          margin-left: -4em;
+        }
+      }
+    }
+
+    .card-icons-container {
+      display: none;
+    }
+  }
+
+  .summary-container,
+  .card-product-car {
+    border: none;
+    border-radius: 0;
+    background-color: rgba(#000, 0.04);
+  }
+}

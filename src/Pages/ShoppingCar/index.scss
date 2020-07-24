@@ -13,13 +13,14 @@
 }
 
 .card-product-car-image {
-  width: 7rem;
+  width: 10rem;
 }
 
 .description-section-product-car {
   .price-text {
     font-size: 18px;
     font-weight: bold;
+    margin: 0;
   }
 
   .shipping-container {
@@ -46,6 +47,8 @@
   background-color: rgba($seconday-color, 0.125);
 }
 .card-icons-container {
+  display: flex;
+  align-items: start;
   .icon-card {
     color: $seconday-color;
   }

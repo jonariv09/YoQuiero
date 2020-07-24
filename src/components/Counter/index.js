@@ -31,7 +31,7 @@ export default class Counter extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <button
           className="quantity-less-button btn"
           onClick={this.handleMinusQuantity}
@@ -47,7 +47,7 @@ export default class Counter extends Component {
         >
           <FiPlusSquare />
         </button>
-      </>
+      </div>
     )
   }
 }
