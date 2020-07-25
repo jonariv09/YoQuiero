@@ -65,24 +65,6 @@ export default class Navbar2 extends Component {
           {/*Fin tipo de moneda*/}
           {/*****************************************************************************/}
           {/*****************************************************************************/}
-          {/*Iconos en tamaño responsive*/}
-          <div className="responsive-navbar navbar-toggler row">
-            <a href="/shopping-car">
-              <FiShoppingCart
-                size={icons.size}
-                className="responsive-navbar-item margin "
-              />
-            </a>
-            <a href="/storeProfile">
-              <FiUser
-                size={icons.size}
-                className="responsive-navbar-item margin"
-              />
-            </a>
-          </div>
-          {/*Fin Iconos en tamaño responsive*/}
-          {/*****************************************************************************/}
-          {/*****************************************************************************/}
           {/*Boton desplegable en tamaño responsive*/}
           <button
             className="navbar-toggler d-md-none"

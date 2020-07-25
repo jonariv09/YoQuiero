@@ -7,7 +7,7 @@ import {AiOutlineLaptop} from 'react-icons/ai'
 import {AiFillCar} from 'react-icons/ai'
 import {FaStore} from 'react-icons/fa'
 import {GiRunningShoe} from 'react-icons/gi'
-import {IoMdFootball} from 'react-icons/io'
+import {FaFootballBall} from 'react-icons/fa'
 import {GiPresent} from 'react-icons/gi'
 import {GiTomato} from 'react-icons/gi'
 const style = {
@@ -64,7 +64,7 @@ export default class IconsModeResponsive extends Component {
           </div>
           <div className="ite" id="item9">
             <a href="#">
-              <IoMdFootball size={style.iconSize} />
+              <FaFootballBall size={style.iconSize} />
             </a>
           </div>
           <div className="ite" id="item10">
