@@ -12,7 +12,7 @@ export default class LowerNavigationBar extends Component {
       <>
         <nav className="wrapper-lower-navigation d-flex justify-content-center align-items-center sticky-top-2 d-block d-md-none">
           <div className="icons-lower-navigation">
-            <a href="#">
+            <a href="/Home">
               <RiHomeSmileLine size={styles.iconSize} />
             </a>
           </div>

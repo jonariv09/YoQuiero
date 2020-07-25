@@ -3,13 +3,11 @@ import NavBar1 from '../../components/Navbar1/index.js'
 import NavBar2 from '../../components/Navbar2/index.js'
 import Navbar3 from '../../components/Navbar3'
 import CounterPrepurchase from '../../components/CounterPrepurchase'
-
 import computadoraGamer from '../../assets/images/computadoraGamer.jpg'
-
 import {FiStar} from 'react-icons/fi'
-
 import './index.scss'
 import './overwrite.scss'
+import LowerNavigationBar from '../../components/LowerNavigationBar/index.js'
 
 export default class PrePurchase extends Component {
   render() {
@@ -81,6 +79,7 @@ export default class PrePurchase extends Component {
             </div>
           </div>
         </div>
+        <LowerNavigationBar />
       </>
     )
   }
