@@ -21,13 +21,17 @@ export default class PrePurchase extends Component {
 
         <div className="container pre-purchase">
           <div className="row mt-5">
-            <div className="col-md-6 col-12 d-none d-md-block">
+            <div className="col-12 col-md-8 ">
               <div className="d-flex flex-column align-items-center">
                 <img src={computadoraGamer} className="big-image" alt="" />
               </div>
               <div className="small-images">
                 <img src={computadoraGamer} className="small-image" alt="" />
-                <img src={computadoraGamer} className="small-image" alt="" />
+                <img
+                  src={computadoraGamer}
+                  className="small-image d-none d-md-block"
+                  alt=""
+                />
               </div>
             </div>
             <div className="col-md-4 col-12 pt-5">
