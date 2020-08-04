@@ -14,7 +14,7 @@ export default class Footer extends Component {
   render() {
     return (
       <>
-        <footer className="page-footer font-small blue pt-4 color color-letra">
+        <footer className="page-footer font-small blue pt-4 color color-letra d-none d-md-block">
           <div className="container-fluid text-md-left">
             <div className="row">
               <div className="col-md-4 mb-md-0 mb-4">

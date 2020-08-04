@@ -65,20 +65,6 @@ export default class Navbar2 extends Component {
           {/*Fin tipo de moneda*/}
           {/*****************************************************************************/}
           {/*****************************************************************************/}
-          {/*Iconos en tamaño responsive*/}
-          <div className="responsive-navbar navbar-toggler row">
-            <FiShoppingCart
-              size={icons.size}
-              className="responsive-navbar-item margin "
-            />
-            <FiUser
-              size={icons.size}
-              className="responsive-navbar-item margin"
-            />
-          </div>
-          {/*Fin Iconos en tamaño responsive*/}
-          {/*****************************************************************************/}
-          {/*****************************************************************************/}
           {/*Boton desplegable en tamaño responsive*/}
           <button
             className="navbar-toggler d-md-none"
@@ -147,7 +133,11 @@ export default class Navbar2 extends Component {
               </div>
             </div>
             <div className="col-4 d-none d-md-block">
-              <button className="btn btn-sm btn-success" title="Iniciar sesión">
+              <button
+                href="/storeProfile"
+                className="btn btn-sm btn-success"
+                title="Iniciar sesión"
+              >
                 Iniciar sesión
               </button>
             </div>
@@ -201,7 +191,12 @@ export default class Navbar2 extends Component {
                 </a>
               </li>
               <li class="nav-item d-none d-md-block">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+                <a
+                  class="nav-link"
+                  href="/shopping-car"
+                  tabindex="-1"
+                  aria-disabled="true"
+                >
                   <FiShoppingCart
                     size={icons.size}
                     className="responsive-navbar-item"

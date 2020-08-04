@@ -1,0 +1,13 @@
+.wrapper-lower-navigation {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 3rem;
+  background-color: rgb(255, 255, 255);
+  z-index: 1020;
+}
+
+.icons-lower-navigation a {
+  color: rgb(119, 119, 119);
+  margin: 25px;
+}

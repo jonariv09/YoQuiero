@@ -4,6 +4,7 @@ import Navbar2 from '../../components/Navbar2/index.js'
 import Navbar3 from '../../components/Navbar3/index.js'
 import Navbar4 from '../../components/Navbar4/index.js'
 import Categorias from '../../components/Categories/index.js'
+import LowerNavigationBar from '../../components/LowerNavigationBar/index.js'
 import Carousel from '../../components/Carousel/index.js'
 import Annoucement from '../../components/Annoucement/index.js'
 import Slider1 from '../../components/Slider1/index.js'
@@ -21,7 +22,7 @@ export default function Home() {
       <Navbar2 />
       <Navbar3 />
       <Navbar4 />
-
+      <LowerNavigationBar />
       <div className="container-fluid px-4 d-none d-md-block">
         <div className="row mt-4 px-5">
           <div className="col-xl-3 ">
