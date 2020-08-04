@@ -2,14 +2,15 @@ import React, {Component} from 'react'
 
 import {FiCamera, FiPhone, FiMail, FiTag, FiList, FiTruck} from 'react-icons/fi'
 
-import NavBar from '../../components/Navbar'
-import NavBar3 from '../../components/Navbar3'
 import ProductsSellerProfile from '../../components/ProductsSellerProfile'
 import BottomNavBar from '../../components/BottomNavBar'
+import Navbar2 from '../../components/Navbar2'
+import Navbar3 from '../../components/Navbar3'
 
 import './index.scss'
 import './overwrite.scss'
 import '../../scss/responsive/_store-profile.scss'
+import Navbar1 from '../../components/Navbar1'
 
 export default class StoreProfile extends Component {
   constructor(props) {
@@ -45,8 +46,9 @@ export default class StoreProfile extends Component {
   render() {
     return (
       <>
-        {/*<NavBar />*/}
-        {/*<NavBar3 />*/}
+        <Navbar1 />
+        <Navbar2 />
+        <Navbar3 />
 
         <div className="container position-relative">
           <div className="card-business-preview">

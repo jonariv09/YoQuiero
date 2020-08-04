@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import CreateStoreForm from '../../components/CreateStoreForm'
 import Navbar1 from '../../components/Navbar1'
-import Navbar from '../../components/Navbar'
+import Navbar2 from '../../components/Navbar2'
 import Navbar3 from '../../components/Navbar3'
 import BusinessPreview from '../../components/BusinessPreview'
 
@@ -16,9 +16,9 @@ export default class CreateStore extends Component {
         <div className="wrapper-store-page">
           <div className="content-wrapper-store-page">
             <div className="content-page">
-              {/*<Navbar1 />*/}
-              {/*<Navbar />*/}
-              {/*<Navbar3 />*/}
+              <Navbar1 />
+              <Navbar2 />
+              <Navbar3 />
               <div className="container">
                 <div className="row row-store-page">
                   <div className="col1-store-page col-12 col-lg-4">

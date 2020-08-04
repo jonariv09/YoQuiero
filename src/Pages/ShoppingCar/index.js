@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-
-import NavBar from '../../components/Navbar'
 import Navbar3 from '../../components/Navbar3'
 
 import {FiTrash2, FiHeart, FiMinus} from 'react-icons/fi'
