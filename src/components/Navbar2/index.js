@@ -30,7 +30,7 @@ export default class Navbar2 extends Component {
           {/*****************************************************************************/}
           {/*Logo*/}
           <div className="col-2">
-            <a className="logo navbar-brand mr-auto " href="#">
+            <a className="logo navbar-brand mr-auto " href="/">
               <img src={Logo} className="image-logo" alt="" />
             </a>
           </div>

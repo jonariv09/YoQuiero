@@ -12,7 +12,7 @@ export default class Navbar3 extends Component {
       <>
         <nav className="wrapper m-0">
           <div className="item d-none d-md-block">
-            <a href="#">
+            <a href="/createStore">
               <FaShoppingBasket size={styles.iconSize} />
               Crear
             </a>
