@@ -27,7 +27,7 @@ export default class LowerNavigationBar extends Component {
             </a>
           </div>
           <div className="icons-lower-navigation">
-            <a href="#">
+            <a href="/shopping-car">
               <FiShoppingCart size={styles.iconSize} />
             </a>
           </div>
