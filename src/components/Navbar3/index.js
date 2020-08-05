@@ -19,7 +19,7 @@ export default class Navbar3 extends Component {
           </div>
           <div className="divider-line"></div>
           <div className="item d-md-none">
-            <a href="#">
+            <a href="/createStore">
               <FaShoppingBasket size={styles.iconSize} />
               Crear
             </a>
