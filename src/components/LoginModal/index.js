@@ -72,7 +72,7 @@ export default class LoginModal extends Component {
                   <div className="form-group">
                     <input
                       type="email"
-                      className="form-control"
+                      className="form-control form-control-modal"
                       id="exampleInputEmail1"
                       placeholder="Nombre de usuario"
                     />
@@ -80,7 +80,7 @@ export default class LoginModal extends Component {
                   <div className="form-group">
                     <input
                       type="email"
-                      className="form-control"
+                      className="form-control form-control-modal"
                       id="exampleInputEmail1"
                       placeholder="Correo"
                     />
@@ -88,7 +88,7 @@ export default class LoginModal extends Component {
                   <div className="form-group">
                     <input
                       type="email"
-                      className="form-control"
+                      className="form-control form-control-modal"
                       id="exampleInputEmail1"
                       placeholder="Contraseña"
                     />
@@ -96,7 +96,7 @@ export default class LoginModal extends Component {
                   <div className="form-group">
                     <input
                       type="email"
-                      className="form-control"
+                      className="form-control form-control-modal"
                       id="exampleInputEmail1"
                       placeholder="Escriba de nuevo su contraseña"
                     />

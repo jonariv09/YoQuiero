@@ -134,13 +134,15 @@ export default class Navbar2 extends Component {
               </div>
             </div>
             <div className="col-4 d-none d-md-block">
-              <button
-                href="/storeProfile"
+              <a
+                href=""
                 className="btn btn-sm btn-success"
                 title="Iniciar sesión"
+                data-toggle="modal"
+                data-target="#loginmodal"
               >
                 Iniciar sesión
-              </button>
+              </a>
             </div>
 
             {/*Fin Idioma*/}
