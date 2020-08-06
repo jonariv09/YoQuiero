@@ -3,7 +3,6 @@ import {FiHelpCircle} from 'react-icons/fi'
 import {Redirect} from 'react-router-dom'
 import './index.scss'
 import './overwrite.scss'
-import LoginModal from '../LoginModal'
 
 export default class CreateStoreForm extends Component {
   constructor(props) {
@@ -72,18 +71,14 @@ export default class CreateStoreForm extends Component {
               negocio
             </p>
             <a
-              href=""
+              href="/storeProfile"
               role="button"
               className="btn btn-primary mt-2"
-              data-toggle="modal"
-              data-target="#loginmodal"
             >
               Crear tu negocio
             </a>
           </div>
         </form>
-
-        <LoginModal to="/storeProfile" />
       </>
     )
   }
