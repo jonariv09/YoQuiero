@@ -34,8 +34,6 @@ export default class LowerNavigationBar extends Component {
             </a>
           </div>
         </nav>
-
-        <LoginModal to="/createStore" />
       </>
     )
   }

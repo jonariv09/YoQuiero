@@ -44,11 +44,12 @@ export default class ShoppingCar extends Component {
   }
 
   handleMinusQuantity(id) {
-    // products.map((product, index) => {
-    //   if (index + 1 === id) {
-    //     this.calculateSubtotal()
-    //   }
-    // })
+    products.map((product, index) => {
+      if (product.id === id) {
+        this.calculateSubtotal()
+      }
+      return null
+    })
   }
 
   handleMoreQuantity() {
@@ -89,7 +90,8 @@ export default class ShoppingCar extends Component {
                         <p className="price-text"> C$ {product.price} </p>
 
                         <Counter
-                          onMinusQuantity={this.handleMinusQuantity()}
+                          idProduct={product.id}
+                          onMinusQuantity={this.handleMinusQuantity}
                           onMoreQuantity={this.handleMoreQuantity}
                         />
 
@@ -103,10 +105,10 @@ export default class ShoppingCar extends Component {
                     </div>
 
                     <div className="ml-auto card-icons-container">
-                      <button className="btn">
+                      <button className="btn btn-icon">
                         <FiTrash2 size={icons.size} className="icon-card" />
                       </button>
-                      <button className="btn">
+                      <button className="btn btn-icon">
                         <FiHeart size={icons.size} className="icon-card" />
                       </button>
                     </div>

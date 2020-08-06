@@ -18,7 +18,7 @@ export default class Counter extends Component {
       this.setState({
         quantity: this.state.quantity - 1,
       })
-      this.props.onMinusQuantity()
+      this.props.onMinusQuantity(this.props.idProduct)
     }
   }
 
@@ -26,12 +26,12 @@ export default class Counter extends Component {
     this.setState({
       quantity: this.state.quantity + 1,
     })
-    this.props.onMoreQuantity()
+    this.props.onMoreQuantity(this.props.idProduct, this.state.quantity)
   }
 
   render() {
     return (
-      <div>
+      <div className="counter-container">
         <button
           className="quantity-less-button btn"
           onClick={this.handleMinusQuantity}
@@ -39,7 +39,7 @@ export default class Counter extends Component {
           <FiMinusSquare />
         </button>
 
-        <span className="quantity-number">{this.state.quantity}</span>
+        <span className="quantity-number"> {this.state.quantity} </span>
 
         <button
           className="quantity-more-button btn"

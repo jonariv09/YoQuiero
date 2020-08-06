@@ -35,23 +35,25 @@ export default class Product extends Component {
           <div className="row">
             {images.map((image, index) => (
               <div className="col-6 col-md-4 col-lg-2" key={index}>
-                <div className="card">
-                  <div className="card-header">
-                    <img src={image} className="product-image" alt="" />
-                  </div>
-                  <div className="card-body">
-                    <div className="text-description text-muted text-truncate">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Explicabo, quibusdam?
+                <a href="/shopping-car" className="link-product-card">
+                  <div className="card">
+                    <div className="card-header">
+                      <img src={image} className="product-image" alt="" />
                     </div>
+                    <div className="card-body">
+                      <div className="text-description text-muted text-truncate">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Explicabo, quibusdam?
+                      </div>
 
-                    <div className="text-price font-weight-bold"> C$450</div>
-                    <div className="text-sold-number text-muted">
-                      {' '}
-                      523 vendidos{' '}
+                      <div className="text-price font-weight-bold"> C$450</div>
+                      <div className="text-sold-number text-muted">
+                        {' '}
+                        523 vendidos{' '}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             ))}
           </div>

@@ -17,6 +17,7 @@
 }
 
 .description-section-product-car {
+  flex-grow: 2;
   .price-text {
     font-size: 18px;
     font-weight: bold;
@@ -67,5 +68,11 @@
     &-number {
       font-size: 20px;
     }
+  }
+}
+
+.card-icons-container {
+  .btn-icon {
+    padding: 0 0.5rem;
   }
 }

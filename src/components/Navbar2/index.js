@@ -13,6 +13,7 @@ import {
   RiShieldStarLine,
 } from 'react-icons/ri'
 import {GiPresent} from 'react-icons/gi'
+import LoginModal from '../LoginModal'
 
 const styles = {
   iconSize: 21,
@@ -216,6 +217,8 @@ export default class Navbar2 extends Component {
             {/*****************************************************************************/}
           </div>
         </nav>
+
+        <LoginModal to="/createStore" />
       </>
     )
   }
