@@ -1,0 +1,40 @@
+.divider-modal {
+  height: 1px;
+  width: 100%;
+  background: #ced4da;
+}
+
+.circle {
+  padding: 0.5em 0.9em;
+  border-radius: 50%;
+  border: solid 1px #ced4da;
+}
+
+.circle::before {
+  content: 'o';
+}
+
+.icon-social-network-modal {
+  font-size: 15px;
+  padding: 1em;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.icon-social-network-modal:hover {
+  color: white;
+}
+
+.icon-social-network-modal.icon-facebook {
+  background-color: rgb(3, 108, 228);
+}
+
+.icon-social-network-modal.icon-twitter {
+  background-color: rgb(3, 169, 244);
+}
+
+.icon-social-network-modal.icon-google {
+  background-color: rgb(255, 182, 53);
+}
