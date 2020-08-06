@@ -12,19 +12,13 @@ export default class Navbar3 extends Component {
     return (
       <>
         <nav className="wrapper m-0">
-          <div className="item d-none d-md-block">
-            <a href="" data-toggle="modal" data-target="#exampleModal">
+          <div className="item">
+            <a href="" data-toggle="modal" data-target="#loginmodal">
               <FaShoppingBasket size={styles.iconSize} />
               Crear
             </a>
           </div>
           <div className="divider-line"></div>
-          <div className="item d-md-none">
-            <a href="/createStore">
-              <FaShoppingBasket size={styles.iconSize} />
-              Crear
-            </a>
-          </div>
 
           <div className="item">
             <a href="#">más vendido</a>
@@ -70,8 +64,6 @@ export default class Navbar3 extends Component {
             <a href="#">Más</a>
           </div>
         </nav>
-
-        <LoginModal />
       </>
     )
   }

@@ -3,6 +3,7 @@ import {FiHelpCircle} from 'react-icons/fi'
 import {Redirect} from 'react-router-dom'
 import './index.scss'
 import './overwrite.scss'
+import LoginModal from '../LoginModal'
 
 export default class CreateStoreForm extends Component {
   constructor(props) {
@@ -18,7 +19,6 @@ export default class CreateStoreForm extends Component {
 
   handleCreateStore() {
     this.setState({redirect: '/storeProfile'})
-    console.log('dfdf')
   }
 
   render() {
@@ -71,11 +71,19 @@ export default class CreateStoreForm extends Component {
               Después de esto podra agregar imagenes y mas información a su
               negocio
             </p>
-            <button type="submit" className="btn btn-primary mt-2">
+            <a
+              href=""
+              role="button"
+              className="btn btn-primary mt-2"
+              data-toggle="modal"
+              data-target="#loginmodal"
+            >
               Crear tu negocio
-            </button>
+            </a>
           </div>
         </form>
+
+        <LoginModal to="/storeProfile" />
       </>
     )
   }

@@ -185,7 +185,12 @@ export default class Navbar2 extends Component {
                 </a>
               </li>
               <li class="nav-item d-md-none">
-                <a class="nav-link" href="#">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#loginmodal"
+                >
                   <MdAccountCircle className="icon" zise={icons.zise} />
                   Crear una cuenta
                 </a>

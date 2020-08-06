@@ -3,6 +3,8 @@ import './index.scss'
 import {RiHomeSmileLine, RiAccountCircleLine} from 'react-icons/ri'
 import {MdMenu} from 'react-icons/md'
 import {FiShoppingCart} from 'react-icons/fi'
+import LoginModal from '../LoginModal'
+
 const styles = {
   iconSize: 30,
 }
@@ -22,7 +24,7 @@ export default class LowerNavigationBar extends Component {
             </a>
           </div>
           <div className="icons-lower-navigation">
-            <a href="#">
+            <a href="#" data-toggle="modal" data-target="#loginmodal">
               <RiAccountCircleLine size={styles.iconSize} />
             </a>
           </div>
@@ -32,6 +34,8 @@ export default class LowerNavigationBar extends Component {
             </a>
           </div>
         </nav>
+
+        <LoginModal to="/createStore" />
       </>
     )
   }

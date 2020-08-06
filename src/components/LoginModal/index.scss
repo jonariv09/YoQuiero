@@ -1,3 +1,6 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
 .divider-modal {
   height: 1px;
   width: 100%;
@@ -37,4 +40,26 @@
 
 .icon-social-network-modal.icon-google {
   background-color: rgb(255, 182, 53);
+}
+
+.modal-footer {
+  .submit-button {
+    color: white;
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
+  .modal {
+    .modal-dialog {
+      padding: 0;
+    }
+
+    .modal-content {
+      .modal-body,
+      .modal-header {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+  }
 }

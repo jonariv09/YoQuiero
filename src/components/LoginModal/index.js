@@ -1,22 +1,36 @@
 import React, {Component} from 'react'
 import {FaFacebookF, FaTwitter, FaGoogle} from 'react-icons/fa'
 import './index.scss'
+import './overwrite.scss'
 
 export default class LoginModal extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+
   render() {
+    const direction = this.props.to
     return (
       <>
         <div
           className="modal fade"
-          id="exampleModal"
+          id="loginmodal"
           tabIndex="-1"
           role="dialog"
-          aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header d-flex flex-column align-items-center pb-0">
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
                 <span className="py-2 lead font-weight-bold text-dark">
                   {' '}
                   Registrar con{' '}
@@ -90,7 +104,11 @@ export default class LoginModal extends Component {
                 </form>
               </div>
               <div className="modal-footer d-flex justify-content-center pt-0">
-                <a href="/createStore" className="btn btn-primary">
+                <a
+                  href={direction}
+                  role="button"
+                  className="submit-button btn btn-primary"
+                >
                   Registrarse
                 </a>
               </div>
