@@ -13,7 +13,7 @@ import Slider3 from '../../components/Slider3/index.js'
 import Product from '../../components/Product/index.js'
 import Information from '../../components/Information/index.js'
 import Footer from '../../components/Footer/index.js'
-import IconsModeResponsive from 'components/IconsModeResponsive/index.js'
+import IconsModeResponsive from '../../components/IconsModeResponsive'
 
 export default function Home() {
   return (
